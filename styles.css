@@ -1,7 +1,7 @@
 /* Error: Can't find stylesheet to import.
  *   ,
- * 1 | @import "./sass/vendors/bootstrap.scss";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 1 | @import "../../node_modules/bootstrap/scss/bootstrap";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
  *   src\styles.scss 1:9  root stylesheet */
 
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"./sass/vendors/bootstrap.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\styles.scss 1:9  root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"../../node_modules/bootstrap/scss/bootstrap\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\styles.scss 1:9  root stylesheet";
 }
