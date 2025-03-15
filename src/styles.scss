@@ -32,45 +32,43 @@
 
 // Role Section Styling
 #role {
-    .container {
-      max-width: 800px; // Adjust width for readability
-      margin: 0 auto; // Center the content
-      padding: 2rem 1rem;
-    }
-  
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-top: 1rem;
-  
-      li {
-        font-size: 1.6rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-      }
-    }
-  
-    .sub-list {
-      list-style-type: circle; // Differentiates nested list
-      padding-left: 30px;
-      margin-top: 0.5rem;
-  
-      li {
-        font-size: 1.4rem; // Slightly smaller for differentiation
-        color: #555;
-        margin-bottom: 0.5rem;
-      }
-    }
-  
-    // Bold the debate topics for better readability
-    strong {
-      color: #222;
-    }
-  
-    // Italicize debate themes for emphasis
-    em {
-      font-style: italic;
-      color: #333;
+  .container {
+    max-width: 800px; // Keeps content centered
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 1rem;
+
+    li {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
     }
   }
+
+  .sub-list {
+    list-style-type: disc; // Ensures the same bullet style
+    padding-left: 25px; // Keeps bullets aligned properly
+    margin-top: 0.5rem;
+
+    li {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // Adjusts the bullet positioning
+  .sub-list li::marker {
+    font-size: 1.2rem; // Adjust bullet size
+    color: #444; // Matches text color
+  }
+}
+
   
