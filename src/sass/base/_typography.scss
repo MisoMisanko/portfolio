@@ -51,3 +51,28 @@ a:hover {
     transform: translateX(2px);
   }
 }
+
+
+// Fix bullet alignment
+#role {
+  ul {
+    list-style-position: inside; // Ensures bullets stay attached to text
+    padding-left: 0; // Removes extra space
+
+    li {
+      margin-bottom: 0.5rem; // Adds spacing for readability
+    }
+  }
+
+  .sub-list {
+    list-style-type: disc; // Makes sublist more uniform
+    list-style-position: inside; // Aligns bullets with text
+    padding-left: 15px; // Adjusts for alignment
+
+    li {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+  }
+}
