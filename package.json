@@ -6,7 +6,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "postbuild": "node scripts/copy-newsletter.cjs"
   },
   "repository": {
     "type": "git",

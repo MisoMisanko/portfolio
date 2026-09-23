@@ -1,0 +1,10 @@
+# Search indexing is disabled only for the newsletter and its media.
+[[headers]]
+  for = "/mlggkflashnewz"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+
+[[headers]]
+  for = "/mlggkflashnewz/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"

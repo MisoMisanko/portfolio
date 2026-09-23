@@ -1,0 +1,1033 @@
+<!doctype html><html lang="sk"><head><base href="/mlggkflashnewz/"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><title>MLGGK Flash Newz</title>
+<meta name="description" content="Týždenný 90s prehľad klientskych drbov pre MullenLowe GGK — tri tímy, auto-update každý pondelok.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee&family=Luckiest+Guy&family=Baloo+2:wght@700;800&family=Press+Start+2P&family=Comic+Neue:wght@400;700&display=swap');
+
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+:root{ color-scheme:dark; --nav-h:64px; }
+*{box-sizing:border-box;}
+body,html{margin:0;padding:0;}
+.stage{
+  position:relative;
+  min-height:100%;
+  font-family:'Comic Neue','Comic Sans MS',cursive; color:#111;
+  background-color:#0d0020;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.9) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 42% 62%, rgba(0,240,255,.85) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 76% 28%, rgba(255,46,151,.85) 0 1.4px, transparent 2px),
+    radial-gradient(circle at 88% 78%, rgba(182,255,0,.85) 0 1.2px, transparent 2px),
+    radial-gradient(circle at 24% 88%, rgba(255,230,0,.85) 0 1.4px, transparent 2px),
+    linear-gradient(135deg,#2a0050,#10002b 45%,#001a3a 75%,#2a0050);
+  background-size:60px 60px,80px 80px,70px 70px,90px 90px,100px 100px,100% 100%;
+  background-attachment:fixed;
+}
+.wrap{position:relative; z-index:1; max-width:1020px; margin:0 auto; padding-block:14px 44px; padding-left:16px; padding-right:16px;}
+#sectionbg{position:absolute; inset:0; z-index:0; pointer-events:none;}
+.sband{position:absolute; left:0; width:100%;}
+#bgstickers{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+#playground{position:absolute; inset:0; z-index:9999; pointer-events:none; overflow:hidden;}
+.bgsticker{position:absolute; display:block; border-radius:9px; border:3px solid #000; box-shadow:4px 4px 0 rgba(0,0,0,.6);
+  cursor:grab; pointer-events:auto; touch-action:none; user-select:none; -webkit-user-drag:none;
+  transition:box-shadow .1s, filter .1s;}
+.bgsticker:hover{box-shadow:6px 6px 0 rgba(0,0,0,.7); filter:brightness(1.06);}
+.bgsticker.grabbing{cursor:grabbing; box-shadow:9px 9px 0 rgba(0,0,0,.75); filter:brightness(1.08);}
+
+.constr{font-family:'Press Start 2P',monospace; font-size:9px; letter-spacing:1px; color:#ffe600;
+  text-align:center; padding:9px 8px; line-height:1.8; background:#111;
+  border:3px solid #ffe600; border-radius:6px;
+  box-shadow:inset 0 0 0 3px #111, inset 0 0 0 6px #ffe600;}
+.constr span{background:#ffe600; color:#111; padding:2px 6px; border-radius:3px;}
+.blink{animation:bl 1s steps(1) infinite;} @keyframes bl{50%{opacity:0}}
+.marquee{margin-top:8px; border:3px solid #fff; border-radius:30px; overflow:hidden; white-space:nowrap;
+  background:linear-gradient(90deg,#ff2e97,#ff7a00,#ffe600,#b6ff00,#00f0ff,#8a2be2,#ff2e97);}
+.marquee div{display:inline-block; padding:6px 0; font-family:'Bungee',sans-serif; font-size:13px; color:#fff;
+  text-shadow:2px 2px 0 #000; letter-spacing:1px; padding-left:100%; animation:scroll 22s linear infinite;}
+@keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){ .marquee div{animation:none; padding-left:0;} .blink{animation:none;} }
+
+.hero{text-align:center; margin:16px 0 6px;}
+.wa{font-family:'Bungee Shade',cursive; font-size:clamp(38px,8.5vw,66px); line-height:.98;
+  background:linear-gradient(180deg,#fff 0%,#ffe600 22%,#ff7a00 45%,#ff2e97 68%,#8a2be2 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:2px #000;
+  filter:drop-shadow(4px 4px 0 #00f0ff) drop-shadow(7px 7px 0 rgba(0,0,0,.5));
+  transform:rotate(-3deg) skewX(-6deg); display:inline-block;}
+.wa2{font-family:'Luckiest Guy',cursive; font-size:clamp(46px,10.5vw,80px); line-height:.9;
+  background:linear-gradient(90deg,#ff2e97,#00f0ff 50%,#b6ff00);
+  -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:2px #000;
+  filter:drop-shadow(5px 5px 0 #ff2e97) drop-shadow(8px 8px 0 rgba(0,0,0,.55));
+  transform:rotate(2deg); display:inline-block; margin-top:-8px;}
+.sub{display:inline-block; margin-top:12px; font-family:'Bungee',sans-serif; font-size:12px; color:#111;
+  background:#b6ff00; border:3px solid #000; border-radius:20px; padding:5px 14px;
+  transform:rotate(-1.5deg); box-shadow:3px 3px 0 #000;}
+.pick{margin-top:10px; font-family:'Press Start 2P',monospace; font-size:9px; color:#fff; letter-spacing:1px;}
+
+.unitnav{position:static; z-index:60; display:flex; gap:8px;
+  justify-content:center; flex-wrap:wrap; padding:10px; margin:8px -4px 10px;
+  background:rgba(8,0,20,.9); border:3px solid #fff; border-radius:16px;}
+.navbtn{font-family:'Bungee',sans-serif; font-size:clamp(11px,2.6vw,15px); text-decoration:none; color:#000;
+  padding:8px 14px; border:3px solid #000; border-radius:12px; box-shadow:3px 3px 0 #000; white-space:nowrap;
+  display:inline-flex; align-items:center; gap:6px; transition:transform .08s;}
+.navbtn:active{transform:translate(2px,2px); box-shadow:1px 1px 0 #000;}
+.navbtn .dot{width:12px;height:12px;border-radius:50%;border:2px solid #000;display:inline-block;}
+.navbtn.yellow{background:#ffe600;} .navbtn.yellow .dot{background:#111;}
+.navbtn.cyan{background:#00e5ff;} .navbtn.cyan .dot{background:#003d7a;}
+.navbtn.blue{background:#123a8f; color:#fff; text-shadow:1px 1px 0 #000;} .navbtn.blue .dot{background:#fff;}
+
+.zone{border-radius:22px; margin:34px 0; padding:20px 16px 26px; border:5px solid #000;
+  box-shadow:12px 12px 0 rgba(0,0,0,.55); scroll-margin-top:calc(var(--nav-h) + 12px); position:relative; overflow:hidden;}
+.zone .ztitle{font-family:'Bungee Shade',cursive; font-size:clamp(30px,7vw,56px); line-height:1;
+  -webkit-text-stroke:2px #000; text-shadow:none; margin:2px 0 2px; transform:rotate(-2deg); display:inline-block;}
+.zone .zsub{display:inline-block; font-family:'Bungee',sans-serif; font-size:12px; padding:4px 12px;
+  border:3px solid #000; border-radius:20px; box-shadow:3px 3px 0 #000; transform:rotate(1deg);}
+.zone .ztop{text-align:center; margin-bottom:8px;}
+.zone .logos{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:12px 0 6px;}
+.logotile{background:#fff; border:3px solid #000; border-radius:10px; padding:6px 12px; height:56px;
+  display:flex; align-items:center; box-shadow:3px 3px 0 rgba(0,0,0,.5);}
+.logotile img{height:40px; width:auto; display:block;}
+.logotile.ph{font-family:'Press Start 2P',monospace; font-size:8px; color:#888; line-height:1.5; text-align:center;}
+
+.zone.yellow{background:
+  repeating-linear-gradient(45deg, rgba(0,0,0,.06) 0 18px, transparent 18px 36px),
+  linear-gradient(135deg,#ffe600,#ffd200 60%,#ffb300);}
+.zone.yellow .ztitle{color:#111; filter:drop-shadow(5px 5px 0 #e60000);}
+.zone.yellow .zsub{background:#111; color:#ffe600;}
+.zone.cyan{background:
+  repeating-linear-gradient(-45deg, rgba(255,255,255,.10) 0 18px, transparent 18px 36px),
+  linear-gradient(135deg,#00e5ff,#00b4e6 55%,#0090d4);}
+.zone.cyan .ztitle{color:#fff; filter:drop-shadow(5px 5px 0 #003d7a);}
+.zone.cyan .zsub{background:#003d7a; color:#00e5ff;}
+.zone.blue{background:
+  repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 18px, transparent 18px 36px),
+  linear-gradient(135deg,#001e50,#123a8f 60%,#1f4ef5);}
+.zone.blue .ztitle{color:#fff; filter:drop-shadow(5px 5px 0 #00e5ff);}
+.zone.blue .zsub{background:#00e5ff; color:#001e50;}
+
+.card{position:relative; background:#fffef2; border:4px solid #000; border-radius:16px; margin:22px 0 0;
+  padding:14px 16px; box-shadow:8px 8px 0 rgba(0,0,0,.6); display:flex; gap:16px; align-items:flex-start;}
+.card .body{flex:1; min-width:0;}
+.card:nth-of-type(even) .media{order:-1;}
+.tag{position:absolute; top:-16px; left:16px; font-family:'Bungee',sans-serif; font-size:13px; color:#fff;
+  padding:4px 12px; border:3px solid #000; border-radius:30px; box-shadow:3px 3px 0 #000;
+  transform:rotate(-2deg); text-shadow:1.5px 1.5px 0 #000; display:inline-flex; align-items:center; gap:6px;}
+.tag img{height:18px; width:auto; background:#fff; border-radius:3px; padding:1px 2px;}
+.emoji{font-size:28px; vertical-align:-4px;}
+.head{font-family:'Baloo 2',cursive; font-weight:800; font-size:23px; margin:8px 0 2px; text-shadow:1px 1px 0 #fff; line-height:1.08;}
+.orig{font-style:italic; font-size:12.5px; color:#444; margin:0 0 6px;}
+.tldr{font-weight:700; font-size:15px; line-height:1.32; margin:0 0 10px;}
+.hi{background:#ffe600; padding:0 3px; border-radius:3px;}
+.newflag{font-family:'Press Start 2P',monospace; font-size:8px; color:#e60000;
+  border:2px solid #e60000; padding:2px 4px; border-radius:4px; margin-left:6px; vertical-align:3px;}
+.btn{display:inline-block; font-family:'Bungee',sans-serif; font-size:11px; text-decoration:none; color:#000;
+  background:linear-gradient(180deg,#fff,#00f0ff); border:3px solid #000; border-radius:8px;
+  padding:5px 11px; margin:2px 6px 2px 0; box-shadow:3px 3px 0 #000;}
+.btn:before{content:"👉 ";}
+.btn.alt{background:linear-gradient(180deg,#fff,#b6ff00);}
+.btn.alt2{background:linear-gradient(180deg,#fff,#ff2e97); color:#fff; text-shadow:1px 1px 0 #000;}
+
+.media{flex:0 0 210px; display:flex; align-items:center; justify-content:center;}
+.thumbframe{width:210px; aspect-ratio:16/9; border:3px solid #000; border-radius:8px; overflow:hidden;
+  background:#141414; box-shadow:5px 5px 0 rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center;}
+.thumbframe img{width:100%; height:100%; object-fit:cover; display:block;}
+.thumbph{font-family:'Press Start 2P',monospace; font-size:8px; color:#8aa; line-height:1.8; text-align:center;}
+.thumbph span{font-size:22px; display:block; margin-bottom:4px;}
+
+/* generovaný „cover" (keď nemáme reálny náhľad) */
+.gencover{width:100%; height:100%; position:relative; display:flex; flex-direction:column; justify-content:flex-end; padding:9px; overflow:hidden;}
+.gencover.gc-yellow{background:linear-gradient(135deg,#ffd200,#ff9e00);}
+.gencover.gc-cyan{background:linear-gradient(135deg,#00e5ff,#0090d4);}
+.gencover.gc-blue{background:linear-gradient(135deg,#123a8f,#1f4ef5);}
+.gencover .gc-logo{position:absolute; top:7px; left:7px; height:22px; width:auto; object-fit:contain;
+  background:#fff; border:2px solid #000; border-radius:5px; padding:2px 4px;}
+.gc-emoji{position:absolute; top:2px; right:7px; font-size:42px; filter:drop-shadow(1px 1px 0 rgba(0,0,0,.4));}
+.gc-title{font-family:'Baloo 2',cursive; font-weight:800; font-size:15px; line-height:1.08; color:#fff;
+  -webkit-text-stroke:1px #000; text-shadow:2px 2px 0 rgba(0,0,0,.55);
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+
+/* animated gif background per unit */
+.stickers{position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden;}
+.sticker{position:absolute; display:block; opacity:.5; filter:drop-shadow(2px 2px 0 rgba(0,0,0,.25));}
+.zone > *{position:relative; z-index:1;}
+.zone > .stickers{position:absolute; z-index:0;}
+
+/* per-unit fun fact */
+.unitfact{margin-top:22px; background:rgba(0,0,0,.82); color:#fff; border:3px solid #fff; border-radius:14px;
+  padding:14px 16px; text-align:center; font-family:'Comic Neue',cursive; font-weight:700; font-size:15px; line-height:1.45;
+  box-shadow:6px 6px 0 rgba(0,0,0,.4);}
+.unitfact .uflabel{display:block; font-family:'Press Start 2P',monospace; font-size:10px; margin-bottom:8px; letter-spacing:1px;}
+.zone.yellow .unitfact .uflabel{color:#ffe600;}
+.zone.cyan .unitfact .uflabel{color:#00e5ff;}
+.zone.blue .unitfact .uflabel{color:#00e5ff;}
+
+.emptyunit{background:#fffef2; border:4px dashed #000; border-radius:16px; margin-top:18px; padding:22px 16px;
+  text-align:center; font-family:'Bungee',sans-serif; font-size:15px; color:#333;}
+.emptyunit .big{font-size:34px; display:block; margin-bottom:6px;}
+
+.foot{margin-top:30px; background:#000; color:#b6ff00; border:3px solid #b6ff00; border-radius:12px; padding:18px 16px; font-size:12px; text-align:center;}
+.fflabel{font-family:'Press Start 2P',monospace; font-size:11px; color:#00f0ff; letter-spacing:1px; margin-bottom:10px;}
+.funfact{font-family:'Comic Neue',cursive; font-weight:700; font-size:17px; color:#fff; line-height:1.45; max-width:660px; margin:0 auto;}
+.nonews{font-family:'Bungee',sans-serif; font-size:16px; color:#fff; line-height:1.45; max-width:760px; margin:0 auto; text-shadow:2px 2px 0 rgba(0,0,0,.6);}
+.nonews b{color:#ffe600;}
+.disc{color:#7a8; font-size:10px; margin-top:10px;}
+.madeby{margin-top:16px; font-family:'Press Start 2P',monospace; font-size:11px; color:#00f0ff; letter-spacing:2px;}
+@media(max-width:640px){ .card{flex-direction:column;} .card:nth-of-type(even) .media{order:0;} .media{flex:none; align-self:center;} }
+
+#musicbtn{position:fixed; right:14px; bottom:calc(14px + env(safe-area-inset-bottom,0px)); z-index:10001;
+  font-family:'Bungee',sans-serif; font-size:12px; color:#000; background:#ffe600; border:3px solid #000;
+  border-radius:30px; padding:9px 14px; box-shadow:4px 4px 0 rgba(0,0,0,.6); cursor:pointer; letter-spacing:.5px;
+  display:inline-flex; align-items:center; gap:6px;}
+#musicbtn.on{background:#b6ff00;}
+#musicbtn:active{transform:translate(2px,2px); box-shadow:2px 2px 0 rgba(0,0,0,.6);}
+
+/* ŠPECIÁLNE VYDANIE (iba keď rozdajú D&AD / Cannes / Zlatý klinec) */
+.specialzone{border-radius:22px; margin:20px 0 6px; padding:22px 16px 26px; border:5px solid #000;
+  box-shadow:12px 12px 0 rgba(0,0,0,.55); position:relative; overflow:hidden; scroll-margin-top:calc(var(--nav-h) + 12px);
+  background:repeating-linear-gradient(45deg, rgba(255,215,0,.10) 0 16px, transparent 16px 32px), linear-gradient(135deg,#1a0033,#2a0050 55%,#10002b);}
+.sp-top{text-align:center; margin-bottom:6px;}
+.sp-kick{font-family:'Press Start 2P',monospace; font-size:10px; color:#ffd700; letter-spacing:1px; margin-bottom:8px;}
+.sp-title{font-family:'Bungee Shade',cursive; font-size:clamp(30px,7.2vw,60px); line-height:1; color:#ffd700;
+  -webkit-text-stroke:2px #000; filter:drop-shadow(4px 4px 0 #ff2e97) drop-shadow(7px 7px 0 rgba(0,0,0,.5)); transform:rotate(-1.5deg); display:inline-block;}
+.sp-blurb{max-width:680px; margin:12px auto 0; color:#fff; font-weight:700; font-size:14px; line-height:1.45;}
+.sp-takeaways{background:rgba(0,0,0,.6); border:3px solid #ffd700; border-radius:14px; padding:14px 16px 14px; margin:18px 0;}
+.sp-takeaways h4{margin:0 0 10px; font-family:'Bungee',sans-serif; font-size:14px; color:#ffd700; text-align:center; letter-spacing:.5px;}
+.sp-takeaways ol{margin:0; padding-left:26px; color:#fff;}
+.sp-takeaways li{margin:8px 0; font-weight:700; font-size:14px; line-height:1.38;}
+.sp-camps-h{text-align:center; font-family:'Bungee',sans-serif; font-size:15px; color:#ffd700; margin:20px 0 4px; text-shadow:2px 2px 0 #000;}
+.scard{position:relative; background:#fffef2; border:4px solid #000; border-radius:16px; margin:20px 0 0; padding:16px 16px 14px; box-shadow:8px 8px 0 rgba(0,0,0,.6);}
+.scard .stag{position:absolute; top:-22px; left:16px; font-family:'Bungee',sans-serif; font-size:18px; color:#000; background:#ffd700;
+  padding:7px 18px; border:4px solid #000; border-radius:30px; box-shadow:4px 4px 0 #000; transform:rotate(-2deg); letter-spacing:.5px;}
+.sname{font-family:'Baloo 2',cursive; font-weight:800; font-size:28px; margin:8px 0 2px; text-shadow:1px 1px 0 #fff; line-height:1.08;}
+.swin{display:inline-block; vertical-align:middle; margin-left:8px; background:#000; color:#ffd700; font-family:'Press Start 2P',monospace; font-size:8px; padding:3px 6px; border-radius:4px;}
+.smeta{font-family:'Bungee',sans-serif; font-size:12.5px; color:#b0177a; letter-spacing:.5px; margin:3px 0 7px; text-transform:uppercase;}
+.stldr{font-weight:700; font-size:16.5px; line-height:1.42; margin:0 0 10px;}
+.thumbframe .cardmedia{width:100%; height:100%; border:0; display:block; object-fit:cover;}
+.smedia{width:100%; aspect-ratio:16/9; border:3px solid #000; border-radius:10px; overflow:hidden; margin:4px 0 12px; background:#111; box-shadow:4px 4px 0 rgba(0,0,0,.4);}
+.smedia .cardmedia{width:100%; height:100%; border:0; display:block; object-fit:cover;}
+
+/* výrazné predely medzi sekciami */
+.secdiv{display:flex; align-items:center; gap:12px; margin:40px 0 8px;}
+.secdiv:before,.secdiv:after{content:""; flex:1; height:12px; border:3px solid #000; border-radius:20px;
+  background:repeating-linear-gradient(90deg,#ff2e97 0 12px,#00f0ff 12px 24px,#ffe600 24px 36px,#b6ff00 36px 48px);}
+.secdiv span{font-family:'Bungee',sans-serif; font-size:16px; color:#fff; background:#000; border:3px solid #fff;
+  border-radius:30px; padding:7px 18px; box-shadow:4px 4px 0 rgba(0,0,0,.5); white-space:nowrap; letter-spacing:1px;}
+
+/* pesnička týždňa (Spotify embed) */
+.sotw{background:linear-gradient(135deg,#0a3d1e,#12002b 70%); border:5px solid #1DB954; border-radius:22px;
+  padding:18px 16px 20px; margin:18px 0 6px; text-align:center; box-shadow:10px 10px 0 rgba(0,0,0,.5); position:relative; overflow:hidden;}
+.sotw-kick{font-family:'Press Start 2P',monospace; font-size:11px; color:#1DB954; letter-spacing:1px; margin-bottom:8px;}
+.sotw-title{font-family:'Baloo 2',cursive; font-weight:800; font-size:22px; color:#fff; margin-bottom:12px; line-height:1.1;}
+.sotw-embed{max-width:640px; margin:0 auto 10px; border-radius:12px; overflow:hidden; min-height:80px; background:#191414;}
+.sotw-embed iframe{display:block; width:100%; border:0; border-radius:12px;}
+
+/* ---- „CHCEM VIDIEŤ" + 4 veľké skokové tlačidlá ---- */
+.chcem{text-align:center; margin:26px 0 2px; font-family:'Bungee Shade',cursive; font-size:clamp(34px,9vw,64px); line-height:1;
+  color:#b6ff00; -webkit-text-stroke:2px #000;
+  filter:drop-shadow(4px 4px 0 #ff2e97) drop-shadow(7px 7px 0 rgba(0,0,0,.5)); transform:rotate(-2deg); display:inline-block;}
+.chcemwrap{text-align:center;}
+.pickline{margin:6px 0 2px; font-family:'Bungee',sans-serif; font-size:clamp(11px,2.6vw,14px); color:#fff; text-shadow:2px 2px 0 rgba(0,0,0,.6);}
+.hubgrid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; width:100%; max-width:760px; margin:16px auto 8px; padding:0 4px;}
+.hubbtn{position:relative; cursor:pointer; text-align:left; text-decoration:none; border:5px solid #000; border-radius:18px; padding:18px 16px; min-height:112px;
+  display:flex; align-items:center; gap:14px; box-shadow:8px 8px 0 rgba(0,0,0,.6); transition:transform .08s, box-shadow .08s; font-family:inherit;}
+.hubbtn:active{transform:translate(3px,3px); box-shadow:4px 4px 0 rgba(0,0,0,.6);}
+.hubbtn .hbico{font-size:44px; line-height:1; flex:0 0 auto; filter:drop-shadow(2px 2px 0 rgba(0,0,0,.4));}
+.hubbtn .hbtxt{font-family:'Bungee',sans-serif; font-size:clamp(13px,2.4vw,16px); color:#000; line-height:1.18;}
+.hubbtn .hbtxt small{display:block; margin-top:4px; font-family:'Comic Neue',cursive; font-weight:700; font-size:11px; opacity:.82; letter-spacing:0;}
+.hubbtn .hbnum{position:absolute; top:8px; right:10px; width:28px; height:28px; border-radius:50%; border:3px solid #000; background:#111; color:#b6ff00;
+  font-family:'Bungee',sans-serif; font-size:14px; line-height:24px; text-align:center;}
+.hb-kampane{background:linear-gradient(135deg,#ffd700,#ff9e00);}
+.hb-klienti{background:linear-gradient(135deg,#00e5ff,#123a8f);}
+.hb-konkurencia{background:linear-gradient(135deg,#ff5e3a,#ffd200);}
+.hb-social{background:linear-gradient(135deg,#ff2e97,#00f0ff);}
+
+/* ---- prilepená lišta na skákanie medzi sekciami ---- */
+.jumpbar{position:sticky; top:env(safe-area-inset-top,0px); z-index:70; display:flex; gap:8px; flex-wrap:wrap; justify-content:center;
+  padding:10px; margin:14px -4px 6px; background:rgba(8,0,20,.94); backdrop-filter:blur(5px); border:3px solid #fff; border-radius:16px;}
+.vbtn{cursor:pointer; text-decoration:none; font-family:'Bungee',sans-serif; font-size:clamp(11px,2.4vw,14px); color:#000; border:3px solid #000; border-radius:12px;
+  padding:7px 12px; box-shadow:3px 3px 0 #000; white-space:nowrap; transition:.08s; opacity:.72; filter:grayscale(.45) brightness(.92);}
+.vbtn:active{transform:translate(2px,2px); box-shadow:1px 1px 0 #000;}
+.vbtn.hb-kampane{background:#ffd700;} .vbtn.hb-klienti{background:#00e5ff;}
+.vbtn.hb-konkurencia{background:#ff5e3a; color:#fff; text-shadow:1px 1px 0 #000;} .vbtn.hb-social{background:#ff2e97; color:#fff; text-shadow:1px 1px 0 #000;}
+.vbtn.active{opacity:1; filter:none; transform:translateY(-1px); box-shadow:3px 4px 0 #000;}
+.area{scroll-margin-top:calc(var(--nav-h) + 14px); margin-top:8px;}
+.subhint{text-align:center; color:#cbd4ff; font-size:12px; font-style:italic; margin:2px 0 6px; opacity:.85;}
+.plat{display:inline-block; font-family:'Press Start 2P',monospace; font-size:8px; color:#fff; background:#000; padding:3px 7px; border-radius:5px; margin-left:8px; vertical-align:middle;}
+.socialzone{background:repeating-linear-gradient(45deg, rgba(0,240,255,.08) 0 16px, transparent 16px 32px), linear-gradient(135deg,#12002b,#0a2540 55%,#10002b);}
+/* bohatší „cover" pre konkurenciu — značka veľká namiesto loga */
+.gencover .gc-brand{position:absolute; top:8px; left:8px; right:8px; font-family:'Bungee',sans-serif; font-size:15px; color:#fff;
+  -webkit-text-stroke:.6px #000; text-shadow:2px 2px 0 rgba(0,0,0,.55); line-height:1.05;}
+.gencover.gc-steal{background:linear-gradient(135deg,#3a1560,#1f0a3a);}
+.gencover.gc-social{background:linear-gradient(135deg,#ff2e97,#00b4e6);}
+.mediafallback{display:none; width:100%; height:100%;}
+</style>
+
+<div class="stage"><div id="sectionbg"></div><div id="bgstickers"></div><div class="wrap">
+<style id="rework">
+.view{animation:fadein .18s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){ .view{animation:none;} }
+.homegrid{display:grid;grid-template-columns:1fr;gap:18px;max-width:640px;margin:22px auto 8px;padding:0 4px;}
+.bigbtn{cursor:pointer;text-align:left;border:5px solid #000;border-radius:22px;padding:22px 20px;min-height:118px;display:flex;align-items:center;gap:16px;box-shadow:9px 9px 0 rgba(0,0,0,.6);transition:transform .08s,box-shadow .08s;font-family:inherit;width:100%;}
+.bigbtn:active{transform:translate(3px,3px);box-shadow:5px 5px 0 rgba(0,0,0,.6);}
+.bigbtn .bbico{font-size:52px;line-height:1;flex:0 0 auto;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.4));}
+.bigbtn .bbtxt{font-family:'Bungee',sans-serif;font-size:clamp(16px,3.6vw,23px);color:#000;line-height:1.15;}
+.bigbtn .bbtxt small{display:block;margin-top:6px;font-family:'Comic Neue',cursive;font-weight:700;font-size:12px;opacity:.82;letter-spacing:0;}
+.bb-svet{background:linear-gradient(135deg,#ff2e97,#ffd200);}
+.bb-doma{background:linear-gradient(135deg,#00e5ff,#b6ff00);}
+.chcem-sm{font-size:clamp(26px,7vw,48px);}
+.unitgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:720px;margin:16px auto 8px;padding:0 4px;}
+.unitbtn{cursor:pointer;text-align:left;border:5px solid #000;border-radius:18px;padding:16px;min-height:108px;display:flex;flex-direction:column;justify-content:center;gap:4px;box-shadow:8px 8px 0 rgba(0,0,0,.6);font-family:'Bungee',sans-serif;font-size:clamp(13px,2.7vw,18px);color:#000;transition:transform .08s,box-shadow .08s;position:relative;line-height:1.1;}
+.unitbtn:active{transform:translate(3px,3px);box-shadow:4px 4px 0 rgba(0,0,0,.6);}
+.unitbtn small{font-family:'Comic Neue',cursive;font-weight:700;font-size:11px;opacity:.85;line-height:1.2;}
+.unitbtn .ubdot{width:16px;height:16px;border-radius:50%;border:3px solid #000;display:inline-block;margin-bottom:4px;}
+.unitbtn .ubico{font-size:26px;line-height:1;margin-bottom:2px;}
+.ub-yellow{background:#ffe600;} .ub-yellow .ubdot{background:#111;}
+.ub-cyan{background:#00e5ff;} .ub-cyan .ubdot{background:#003d7a;}
+.ub-blue{background:#123a8f;color:#fff;text-shadow:1px 1px 0 #000;} .ub-blue .ubdot{background:#fff;}
+.ub-social{background:linear-gradient(135deg,#ff2e97,#00f0ff);color:#fff;text-shadow:1px 1px 0 #000;}
+.backbtn{cursor:pointer;font-family:'Bungee',sans-serif;font-size:13px;color:#000;background:#fff;border:3px solid #000;border-radius:30px;padding:8px 16px;box-shadow:3px 3px 0 #000;margin:4px 0 2px;display:inline-block;}
+.backbtn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000;}
+.konk-host .zone, .clients-host .zone{margin-top:16px;}
+.homehint{text-align:center;color:#cbd4ff;font-size:12px;font-style:italic;margin:14px 0 2px;opacity:.9;}
+</style>
+
+  <!-- ===== HOME ===== -->
+  <div class="view" id="view-home">
+    <div class="hero">
+      <div class="wa">MLGGK</div><br>
+      <div class="wa2">FLASH NEWZ</div>
+      <div><span class="sub" id="datesub">★ prehľad týždňa ★</span></div>
+    </div>
+    <div class="chcemwrap"><div class="chcem">ČO NOVÉ?</div></div>
+    <div class="pickline">klikni a vyber si 👇</div>
+    <div class="homegrid">
+      <button class="bigbtn bb-svet" data-go="view-world"><span class="bbico">🌍</span><span class="bbtxt">ČO NOVÉ VO SVETE<small>najlepšie kampane pre inšpiráciu</small></span></button>
+      <button class="bigbtn bb-doma" data-go="view-doma"><span class="bbico">🏠</span><span class="bbtxt">ČO NOVÉ DOMA<small>klienti, konkurencia &amp; social — po unitoch</small></span></button>
+    </div>
+    <div class="homehint">MLGGK Flash Newz · auto-update každý pondelok</div>
+  </div>
+
+  <!-- ===== SVET (kampane) ===== -->
+  <div class="view" id="view-world" hidden>
+    <button class="backbtn" data-back="view-home">← späť</button>
+    <div class="secdiv"><span>🌍 ČO NOVÉ VO SVETE</span></div>
+    <div id="specialhost"></div>
+    <div class="foot"><div class="madeby">made by MM</div></div>
+  </div>
+
+  <!-- ===== DOMA (výber unitu) ===== -->
+  <div class="view" id="view-doma" hidden>
+    <button class="backbtn" data-back="view-home">← späť</button>
+    <div class="chcemwrap"><div class="chcem chcem-sm">CHOOSE YOUR UNIT</div></div>
+    <div class="pickline">klikni na svoj unit 👇</div>
+    <div class="unitgrid">
+      <button class="unitbtn ub-yellow" data-go="view-unit-yellow"><span class="ubdot"></span>YELLOW UNIT<small>SPP · Nadácia SPP · Eurovea · Baumit</small></button>
+      <button class="unitbtn ub-cyan" data-go="view-unit-cyan"><span class="ubdot"></span>CYAN UNIT<small>ČSOB</small></button>
+      <button class="unitbtn ub-blue" data-go="view-unit-blue"><span class="ubdot"></span>BLUE UNIT<small>VW · VW Úžitkové · Audi · Porsche · Cupra · Seat</small></button>
+      <button class="unitbtn ub-social" data-go="view-social"><span class="ubico">📱</span>SOCIAL UNIT<small>čo práve fičí na sockách</small></button>
+    </div>
+    <div class="foot">
+      <div class="nonews" id="nonews"></div>
+      <div class="disc" id="discline"></div>
+      <div class="madeby">made by MM</div>
+    </div>
+  </div>
+
+  <!-- ===== UNIT VIEWS ===== -->
+  <div class="view" id="view-unit-yellow" hidden>
+    <button class="backbtn" data-back="view-doma">← späť na unity</button>
+    <div class="secdiv"><span>📰 CLIENT NEWS</span></div>
+    <div class="clients-host" id="clients-yellow"></div>
+    <div class="secdiv"><span>🔥 KONKURENCIA NEWZ</span></div>
+    <div class="konk-host" id="konk-yellow"></div>
+    <div class="foot"><div class="madeby">made by MM</div></div>
+  </div>
+
+  <div class="view" id="view-unit-cyan" hidden>
+    <button class="backbtn" data-back="view-doma">← späť na unity</button>
+    <div class="secdiv"><span>📰 CLIENT NEWS</span></div>
+    <div class="clients-host" id="clients-cyan"></div>
+    <div class="secdiv"><span>🔥 KONKURENCIA NEWZ</span></div>
+    <div class="konk-host" id="konk-cyan"></div>
+    <div class="foot"><div class="madeby">made by MM</div></div>
+  </div>
+
+  <div class="view" id="view-unit-blue" hidden>
+    <button class="backbtn" data-back="view-doma">← späť na unity</button>
+    <div class="secdiv"><span>📰 CLIENT NEWS</span></div>
+    <div class="clients-host" id="clients-blue"></div>
+    <div class="secdiv"><span>🔥 KONKURENCIA NEWZ</span></div>
+    <div class="konk-host" id="konk-blue"></div>
+    <div class="foot"><div class="madeby">made by MM</div></div>
+  </div>
+
+  <!-- ===== SOCIAL UNIT ===== -->
+  <div class="view" id="view-social" hidden>
+    <button class="backbtn" data-back="view-doma">← späť na unity</button>
+    <div class="secdiv"><span>📱 SOCIAL MEDIA TRENDS</span></div>
+    <div id="socialhost"></div>
+    <div class="foot"><div class="madeby">made by MM</div></div>
+  </div>
+
+  <div id="songhost" hidden></div>
+</div></div>
+
+<style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
+<!--FLASH_DATA_START-->
+<script type="application/json" id="FLASH_DATA">
+{
+  "week": "21.–27. september 2026",
+  "verifiedRange": "16.–23. 9. 2026",
+  "competitorsPending": true,
+  "funFacts": {
+    "yellow": "SPP má zásobníky na zimu narvaté po strop — rekordných ~17,5 TWh plynu. Nech si vonku mrzne koľko chce, kúriť budeme.",
+    "cyan": "Najmladší človek, čo cez ČSOB investuje cez AI, má presne jeden rok. Ešte nevie povedať 'úrok', ale portfólio už jede.",
+    "blue": "Nové VW ID.3 GTI má 326 koní a poháňa zadné kolesá — prvé GTI v histórii, čo ti reálne 'hrabe zadnými'. RIP predné náhony."
+  },
+  "competitors": {
+    "yellow": [],
+    "cyan": [
+      {
+        "brand": "Tatra banka",
+        "emoji": "🤖",
+        "headline": "Celý vizuál kampane spravila AI",
+        "tldr": "Tatra banka mení spôsob výroby reklamy — <span class='hi'>celú vizuálnu stránku novej kampane vytvorila umelá inteligencia</span>. Konkurencia v cyan unite ide plný AI mód.",
+        "thumb": "",
+        "links": [
+          {
+            "label": "🔗 Strategie",
+            "url": "https://strategie.hnonline.sk/news/marketing/96303628-tatra-banka-meni-sposob-vyroby-reklamy-celu-vizualnu-stranku-kampane-vytvorila-ai",
+            "style": ""
+          }
+        ]
+      }
+    ],
+    "blue": []
+  },
+  "social": {
+    "blurb": "Čo tento týždeň valcuje feed — 5 trendov, čo sa oplatí odkukať skôr, než ich prevalcuje niekto rýchlejší.",
+    "trends": [
+      {
+        "title": "Reasons to Get a Bob",
+        "platform": "TikTok",
+        "emoji": "💇‍♀️",
+        "tldr": "Deadpan zoznam, kde každý 'dôvod' je len slovo 'bob', na tracku od Fat Papi. Značka si tam vloží vlastný gag — <span class='hi'>kaderníctva a beauty e-shopy</span> sedia najviac, ale otočíš to na hocičo ('dôvody kúpiť si…').",
+        "thumb": "https://www.socialpilot.co/wp-content/uploads/2025/02/tiktok-trends.webp",
+        "links": [
+          {
+            "label": "🔗 SocialPilot",
+            "url": "https://www.socialpilot.co/blog/tiktok-trends",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "title": "Alibi Dance Challenge",
+        "platform": "TikTok",
+        "emoji": "💃",
+        "tldr": "Súťaživý one-take tanec na Sevdaliza 'Alibi', kde sa creatori predbiehajú v čistej choreo. Pre tímové/office značky ideál — <span class='hi'>celý tím na jeden záber</span> ako employer branding.",
+        "thumb": "https://www.socialpilot.co/wp-content/uploads/2025/02/tiktok-trends.webp",
+        "links": [
+          {
+            "label": "🔗 SocialPilot",
+            "url": "https://www.socialpilot.co/blog/tiktok-trends",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "title": "Training Season Manifest",
+        "platform": "Instagram",
+        "emoji": "🏋️‍♀️",
+        "tldr": "Manifestuješ cieľ, akoby sa už dial, na Dua Lipa 'Training Season'. Značka = enabler. Pre SK: fitko appky, sporenie, jazykovky — <span class='hi'>'Toto je rok, keď si konečne… vďaka [značka]'</span>. Septembrový restart paráda.",
+        "thumb": "",
+        "links": [
+          {
+            "label": "🔗 Ramdam",
+            "url": "https://www.ramd.am/blog/trends-instagram",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "title": "Cozy Girl Autumn",
+        "platform": "Reels",
+        "emoji": "🍂",
+        "tldr": "Bezslovná montáž jesenných rituálov — teplý nápoj, vrstvenie, pomalé ráno — na cozy audio. Pre CEE zlato: <span class='hi'>kaviarne, čajovne, drogérie, móda</span> spravia 'slovenskú jeseň' — hmla, kapučíno, sveter, Tatry, žiadny tvrdý predaj.",
+        "thumb": "https://www.datocms-assets.com/151374/1773070097-influencer-marketing-trends-blog-post.jpg",
+        "links": [
+          {
+            "label": "🔗 NewEngen",
+            "url": "https://newengen.com/insights/instagram-trends/",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "title": "Flop-Core / My Recent Flops",
+        "platform": "Reels",
+        "emoji": "🤡",
+        "tldr": "Anti-highlight reel: namiesto naleštených výhier postneš svoje prúsery a bloopre. Autenticita play. Pre skeptické CEE publikum <span class='hi'>'naše najväčšie prúsery tento rok'</span> so sebairóniou funguje extra dobre.",
+        "thumb": "https://www.datocms-assets.com/151374/1773070097-influencer-marketing-trends-blog-post.jpg",
+        "links": [
+          {
+            "label": "🔗 NewEngen",
+            "url": "https://newengen.com/insights/instagram-trends/",
+            "style": ""
+          }
+        ]
+      }
+    ]
+  },
+  "special": {
+    "active": true,
+    "festival": "",
+    "takeaways": [],
+    "title": "NAJLEPŠIE KAMPANE TÝŽDŇA",
+    "campaigns": [
+      {
+        "name": "World Menu Heist (Returns)",
+        "brand": "McDonald's UK & Ireland",
+        "agency": "Leo UK",
+        "win": "",
+        "tldr": "McDonald's cez social listening zistil, po ktorých zahraničných jedlách ľudia najviac slintajú, a potom ich 'prebral' z ôsmich krajín na UK menu — celé zabalené do heist príbehu s creatormi. Data → limitka → sranda.",
+        "thumb": "https://www.famouscampaigns.com/wp-content/uploads/2026/09/menu-heist-mcdonalds-2.png",
+        "links": [
+          {
+            "label": "🔗 O kampani (Famous Campaigns)",
+            "url": "https://www.famouscampaigns.com/2026/09/mcdonalds-lets-fans-pick-the-targets-for-biggest-menu-heist-yet/",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "name": "F££T FUND",
+        "brand": "Columbia Sportswear",
+        "agency": "adam&eve/TBWA",
+        "win": "",
+        "tldr": "Značka topánok ti platí 135 libier za fotku tvojich bosých nôh v prírode. Anti-topánková stunt kampaň od výrobcu topánok. Absolútny galaxy-brain move.",
+        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/c2d6fbafe1/feet-fun-columbia-adam-eve.jpg",
+        "links": [
+          {
+            "label": "🔗 O kampani (Creative Salon)",
+            "url": "https://creative.salon/articles/work/columbia-sportswear-fpoundpoundt-fund-adam-eve-tbwa",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "name": "Candy Country (Shania Twain x Zedd)",
+        "brand": "Candy Crush Saga",
+        "agency": "Pablo London",
+        "win": "",
+        "tldr": "Candy Crush prerobil Shania Twain 'You're Still the One' so Zeddom na klip a schoval doň easter eggy = cross-platform honba za pokladom. Z pesničky sa stala hra.",
+        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/1b95af4457/candy-crush-country-pablo.jpg",
+        "links": [
+          {
+            "label": "🔗 O kampani (Creative Salon)",
+            "url": "https://creative.salon/articles/work/candy-crush-shania-twain-candy-country-pablo-london",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "name": "Pure News, Straight from the Source",
+        "brand": "Reuters",
+        "agency": "Gravity Road",
+        "win": "",
+        "tldr": "Dva 15-sekundové spoty, kde voda v laborke ukazuje, ako sa info 'zakalí' cestou od zdroja k tebe. Reuters = čistý zdroj. Abstraktný claim cez jeden fyzický experiment.",
+        "thumb": "https://img2.storyblok.com/560x300/f/102932/1920x1080/7cfaa44c02/gravity-road-reuters.jpg",
+        "links": [
+          {
+            "label": "🔗 O kampani (Creative Salon)",
+            "url": "https://creative.salon/articles/work/gravity-road-reuters-the-source",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "name": "For All Wheelkind",
+        "brand": "Halfords",
+        "agency": "Dentsu Creative UK",
+        "win": "",
+        "tldr": "Halfords zjednotil celý svoj bordel produktov pod jednu ľudskú myšlienku — oslavu každého vzťahu človek + vozidlo, s humorom. Z nudného retailu značka s dušou.",
+        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/b57eb40671/for-all-wheelkind-halfords.jpg",
+        "links": [
+          {
+            "label": "🔗 O kampani (Creative Salon)",
+            "url": "https://creative.salon/articles/work/for-all-wheelkind-halfords-dentsu-creative-uk",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "name": "Get Busy Living (Business Banking)",
+        "brand": "Monzo",
+        "agency": "BBH London",
+        "win": "",
+        "tldr": "Monzo natiahol svoju obľúbenú consumer platformu do B2B — tri filmy o tom, ako features oslobodia podnikateľa od admin pekla. Bez vymýšľania novej identity.",
+        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/755da5a9be/monzo-get-busy-living-business-bbh-london.jpg",
+        "links": [
+          {
+            "label": "🔗 O kampani (Creative Salon)",
+            "url": "https://creative.salon/articles/work/monzo-get-busy-living-business-bbh-london",
+            "style": ""
+          }
+        ]
+      }
+    ]
+  },
+  "bouncedBrands": [
+    "Nadácia SPP",
+    "Baumit",
+    "Audi",
+    "Porsche Finance",
+    "Cupra",
+    "Seat"
+  ],
+  "items": [
+    {
+      "client": "spp",
+      "emoji": "🛢️",
+      "hot": true,
+      "headline": "SPP má na zimu narvaté zásobníky po strop — rekordný objem plynu pripravený pre zákazníkov",
+      "orig": "\"SPP bude mať v zásobníkoch pre zákazníkov pripravený rekordný objem zemného plynu\"",
+      "tldr": "SPP hlási <span class='hi'>rekordných ~17,5 TWh</span> plynu v zásobníkoch na zimu 2026/2027 — Slovensko je vraj medzi najlepšie pripravenými krajinami EÚ. Nech si vonku mrzne koľko chce.",
+      "thumb": "https://cdn.sita.sk/sites/32/2026/09/gettyimages-2157200194-1200x800.jpg",
+      "links": [
+        {
+          "label": "SITA (22. 9. 2026)",
+          "url": "https://sita.sk/spp-bude-mat-v-zasobnikoch-pre-zakaznikov-pripraveny-rekordny-objem-zemneho-plynu/",
+          "style": ""
+        }
+      ],
+      "gifTags": [
+        "fire",
+        "energy"
+      ],
+      "gifLabel": "Zima môže prísť",
+      "gifCap": "narvaté po strop"
+    },
+    {
+      "client": "eur",
+      "emoji": "🥐",
+      "hot": false,
+      "headline": "V Eurovei pribudli v MINIT pekárničke štyri nové 'Next Level' príchute",
+      "orig": "\"Štyri nové príchute v MINIT pekárničke\"",
+      "tldr": "MINIT v Eurovei rozbalil štyri nové príchute — <span class='hi'>Cookies & Cream, belgická biela s malinou, pulled pork a burger</span>. Áno, burger v pekárni. Doba pokročila.",
+      "thumb": "https://eurovea.sk/img/containers/social_images/fb-share.png/612bcf9603f688c7ac0524895f07c3de.png",
+      "links": [
+        {
+          "label": "Eurovea (17. 9. 2026)",
+          "url": "https://eurovea.sk/en/news-offers/styri-nove-prichute-v-minit-pekarnicke",
+          "style": ""
+        }
+      ],
+      "gifTags": [
+        "food",
+        "shopping"
+      ],
+      "gifLabel": "Chuťovka týždňa",
+      "gifCap": "burger v pekárni"
+    },
+    {
+      "client": "csob",
+      "emoji": "🏦",
+      "hot": true,
+      "headline": "ČSOB v sobotu vyplo firmám bankovníctvo až na 18 hodín — sťahovalo sa na novú platformu",
+      "orig": "\"ČSOB v sobotu vypne firmám bankovníctvo až na 18 hodín. Toto stále fungovať bude\"",
+      "tldr": "ČSOB v sobotu 19. 9. odstavilo firemné e-bankovníctvo (00:01–18:00) kvôli migrácii na novú platformu, ktorá nabehla v nedeľu. <span class='hi'>Karty a bankomaty jazdili normálne</span>, takže žiadna panika.",
+      "thumb": "https://kryptomagazin.sk/img-upl/2026/09/csob-banka-upozornuje-na-zmenu.webp",
+      "links": [
+        {
+          "label": "Kryptomagazín (18. 9. 2026)",
+          "url": "https://kryptomagazin.sk/csob-v-sobotu-vypne-bankovnictvo-az-na-18-hodin-toto-stale-fungovat-bude/",
+          "style": ""
+        }
+      ],
+      "gifTags": [
+        "bank",
+        "loading"
+      ],
+      "gifLabel": "Údržba prebehla",
+      "gifCap": "18 hodín offline"
+    },
+    {
+      "client": "csob",
+      "emoji": "🤖",
+      "hot": false,
+      "headline": "Klienti ČSOB zverili za rok AI investície cez 50 miliónov — najmladší investor má rok",
+      "orig": "\"Klienti ČSOB zverili za prvý rok umelej inteligencii investície za viac ako 50 miliónov eur. Najmladší investor má iba jeden rok.\"",
+      "tldr": "Za prvý rok <span class='hi'>21 188 klientov</span> hodilo do ČSOB AI-fondu vyše 50,6 mil. €. Priemerný vek investora 50, rozsah 1–94. Decko ešte nepovie 'úrok', ale portfólio už má.",
+      "thumb": "",
+      "links": [
+        {
+          "label": "ČSOB – tlačové správy (18. 9. 2026)",
+          "url": "https://www.csob.sk/o-nas/pre-media/tlacove-spravy",
+          "style": "alt"
+        }
+      ],
+      "gifTags": [
+        "robot",
+        "money"
+      ],
+      "gifLabel": "AI maká",
+      "gifCap": "najmladší má 1 rok"
+    },
+    {
+      "client": "vw",
+      "emoji": "🏎️",
+      "hot": true,
+      "headline": "Nový VW ID.3 GTI je historicky najvýkonnejšie GTI a poháňa zadné kolesá",
+      "orig": "\"Nový Volkswagen ID.3 GTI je historicky najvýkonnejšie GTI a hrabe zadnými\"",
+      "tldr": "VW odhalil ID.3 GTI — <span class='hi'>326 koní, zadný náhon, 545 Nm, 600+ km dojazd</span>. Prvé GTI, čo ti reálne hrabe zadnými. Na trh jar 2027.",
+      "thumb": "https://www.topspeed.sk/userfiles/articles/16-09/29143/thumbnail_1280_720_1789551580-volkswagen.id.3.gti.jpg",
+      "links": [
+        {
+          "label": "TopSpeed (16. 9. 2026)",
+          "url": "https://www.topspeed.sk/novinky/novy-volkswagen-id-3-gti-je-historicky-najvykonnejsie-gti-a-hrabe-zadnymi/29143",
+          "style": ""
+        }
+      ],
+      "gifTags": [
+        "car",
+        "fire"
+      ],
+      "gifLabel": "Hrabe zadnými",
+      "gifCap": "326 koní"
+    },
+    {
+      "client": "lnf",
+      "emoji": "🚐",
+      "hot": false,
+      "headline": "VW predstavil nový Caddy a Multivan — 'úžitkový od slovesa užívať si'",
+      "orig": "\"Predstavenie Volkswagen Caddy a Multivan: Úžitkový od slovesa „užívať si!\"",
+      "tldr": "Osviežený <span class='hi'>Caddy a Multivan</span> pre slovenský trh, nové verzie dorazili v septembri. Úžitkový, ale s vibe.",
+      "thumb": "https://autovinysk.b-cdn.net/wp-content/uploads/2026/09/New-Caddy_AH_002-2-1024x683.jpg",
+      "links": [
+        {
+          "label": "Autoviny (16. 9. 2026)",
+          "url": "https://www.autoviny.sk/novinky/2807413/volkswagen-caddy-a-multivan",
+          "style": ""
+        }
+      ],
+      "gifTags": [
+        "van",
+        "road"
+      ],
+      "gifLabel": "Úžitkový glow-up",
+      "gifCap": "užívať si"
+    }
+  ]
+}
+</script>
+<!--FLASH_DATA_END-->
+
+<script type="application/json" id="ASSET_BANK">{"logos":{"csob":"assets/logo_csob.png","baumit":"assets/logo_baumit.png","spp":"assets/logo_spp.png","nadaciaSpp":"assets/logo_nadaciaSpp.png","vw":"assets/logo_vw.png","lnf":"assets/logo_lnf.png","porsche":"assets/logo_porsche.png","eur":"assets/logo_eur.png","cupra":"assets/logo_cupra.png","audi":"assets/logo_audi.png","seat":"assets/logo_seat.png"},"unitGifs":{"yellow":["assets/yellow_00.gif","assets/yellow_01.gif","assets/yellow_02.gif","assets/yellow_03.gif","assets/yellow_04.gif","assets/yellow_05.gif"],"cyan":["assets/cyan_00.gif","assets/cyan_01.gif","assets/cyan_02.gif","assets/cyan_03.gif"],"blue":["assets/blue_00.gif","assets/blue_01.gif","assets/blue_02.gif","assets/blue_03.gif","assets/blue_04.gif","assets/blue_05.gif"],"steal":["assets/steal_00.gif","assets/steal_01.gif","assets/steal_02.gif","assets/steal_03.gif","assets/steal_04.gif","assets/steal_05.gif","assets/steal_06.gif","assets/steal_07.gif","assets/steal_08.gif","assets/steal_09.gif","assets/steal_10.gif","assets/steal_11.gif","assets/steal_12.gif","assets/steal_13.gif","assets/steal_14.gif","assets/steal_15.gif","assets/steal_16.gif","assets/steal_17.gif","assets/steal_18.gif","assets/steal_19.gif","assets/steal_20.gif","assets/steal_21.gif","assets/steal_22.gif","assets/steal_23.gif","assets/steal_24.gif","assets/steal_25.gif","assets/steal_26.gif","assets/steal_27.gif","assets/steal_28.gif","assets/steal_29.gif","assets/steal_30.gif","assets/steal_31.gif","assets/steal_32.gif","assets/steal_33.gif","assets/steal_34.gif","assets/steal_35.gif","assets/steal_36.gif","assets/steal_37.gif","assets/steal_38.gif","assets/steal_39.gif","assets/steal_40.gif","assets/steal_41.gif","assets/steal_42.gif","assets/steal_43.gif","assets/steal_44.gif","assets/steal_45.gif","assets/steal_46.gif","assets/steal_47.gif"],"social":["assets/social_00.gif","assets/social_01.gif","assets/social_02.gif","assets/social_03.gif","assets/social_04.gif","assets/social_05.gif","assets/social_06.gif","assets/social_07.gif","assets/social_08.gif","assets/social_09.gif","assets/social_10.gif","assets/social_11.gif","assets/social_12.gif","assets/social_13.gif","assets/social_14.gif"]},"song":"assets/song.mp3"}</script>
+
+<script>
+(function(){
+  var UNITS = [
+    { key:"yellow", id:"unit-yellow", name:"YELLOW UNIT", tagline:"SPP · Nadácia SPP · Eurovea · Baumit",
+      compTagline:"energetika · retail/malls · stavebné materiály",
+      clients:["spp","nadaciaSpp","eur","baumit"], tag:"#111", empty:"Žltý tím má tento týždeň mŕtvo, ani ťuk ☕" },
+    { key:"cyan", id:"unit-cyan", name:"CYAN UNIT", tagline:"ČSOB",
+      compTagline:"VÚB · Tatra banka · Slovenská sporiteľňa · 365.bank",
+      clients:["csob"], tag:"#003d7a", empty:"Cyan tím podozrivo ticho, asi ešte spia 🤫" },
+    { key:"blue", id:"unit-blue", name:"BLUE UNIT", tagline:"VW · VW Úžitkové · Audi · Porsche Finance · Cupra · Seat",
+      compTagline:"Škoda · Toyota · Hyundai · Kia · čínske značky",
+      clients:["vw","lnf","audi","porsche","cupra","seat"], tag:"#123a8f", empty:"Modrý tím tento týždeň nenaštartoval, nula noviniek 🏁" }
+  ];
+  var UNIT_OF = {}; UNITS.forEach(function(u){ u.clients.forEach(function(c){ UNIT_OF[c]=u; }); });
+  var CLIENTS = {
+    csob:{name:"ČSOB"}, spp:{name:"SPP"}, nadaciaSpp:{name:"Nadácia SPP"}, eur:{name:"Eurovea"},
+    baumit:{name:"Baumit"}, vw:{name:"Volkswagen"}, lnf:{name:"VW Úžitkové"}, audi:{name:"Audi"},
+    porsche:{name:"Porsche Finance"}, cupra:{name:"Cupra"}, seat:{name:"Seat"}
+  };
+  function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function mediaHTML(o, fallback){
+    if(o && o.yt) return '<iframe class="cardmedia" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(o.yt)+'?rel=0" title="video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+    if(o && o.thumb){
+      var fb = fallback ? '<div class="mediafallback">'+fallback+'</div>' : '';
+      return '<img class="cardmedia" alt="" loading="lazy" src="'+o.thumb+'" onerror="this.style.display=\'none\';var s=this.nextElementSibling;if(s){s.style.display=\'block\';}">'+fb;
+    }
+    return fallback||'';
+  }
+
+  var data, assets;
+  try { data = JSON.parse(document.getElementById("FLASH_DATA").textContent); } catch(e){ data={week:"",items:[]}; }
+  try { assets = JSON.parse(document.getElementById("ASSET_BANK").textContent); } catch(e){ assets={}; }
+  assets=assets||{}; assets.logos=assets.logos||{}; assets.gifs=assets.gifs||[];
+
+  var ds=document.getElementById("datesub"); if(ds) ds.textContent = "★ týždeň " + (data.week||"") + " ★";
+  var dl=document.getElementById("discline"); if(dl) dl.textContent = "Novinky overené v období " + (data.verifiedRange||data.week||"") + ".";
+  var nn=document.getElementById("nonews");
+  if(nn){ nn.innerHTML = (data.bouncedBrands && data.bouncedBrands.length)
+    ? "Tento týždeň žiadne novinky pre klientov: <b>" + esc(data.bouncedBrands.join(", ")) + "</b>" : ""; }
+
+  function logoTile(clientKey){
+    var name = (CLIENTS[clientKey]||{}).name || clientKey;
+    if (assets.logos[clientKey])
+      return '<div class="logotile"><img alt="'+esc(name)+'" src="'+assets.logos[clientKey]+'"></div>';
+    return '<div class="logotile ph">'+esc(name)+'<br>logo<br>čoskoro</div>';
+  }
+
+  function cardHTML(it, unit){
+    var links = (it.links||[]).map(function(l){
+      return '<a class="btn '+(l.style||"")+'" href="'+encodeURI(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';
+    }).join("");
+    var cname = (CLIENTS[it.client]||{}).name || it.client;
+    var tagLogo = assets.logos[it.client] ? '<img alt="" src="'+assets.logos[it.client]+'">' : '';
+    var poster = '<div class="gencover gc-'+unit.key+'">'+(assets.logos[it.client]?'<img class="gc-logo" src="'+assets.logos[it.client]+'">':'')+
+      '<div class="gc-emoji">'+(it.emoji||"")+'</div><div class="gc-title">'+esc(it.headline)+'</div></div>';
+    var thumbInner = mediaHTML(it, poster);
+    return '<div class="card">'+
+      '<div class="body">'+
+        '<span class="tag" style="background:'+unit.tag+'">'+tagLogo+esc(cname)+'</span>'+
+        '<div class="head"><span class="emoji">'+(it.emoji||"")+'</span> '+esc(it.headline)+(it.hot?' <span class="newflag">HOT!</span>':'')+'</div>'+
+        '<div class="orig">'+(it.orig||"")+'</div>'+
+        '<div class="tldr">'+(it.tldr||"")+'</div>'+ links +
+      '</div>'+
+      '<div class="media"><div class="thumbframe">'+thumbInner+'</div></div>'+
+    '</div>';
+  }
+
+  // ===== SVET / NAJLEPŠIE KAMPANE =====
+  function renderSpecial(){
+    var sp=data.special, shost=document.getElementById("specialhost");
+    if(!sp || !sp.active || !shost) return;
+    var awards = !!(sp.takeaways && sp.takeaways.length);
+    var kick = awards ? '🏆 ŠPECIÁLNE VYDANIE 🏆' : '';
+    var heading = esc(awards ? (sp.festival||"AWARDS") : (sp.title||"NAJLEPŠIE KAMPANE TÝŽDŇA"));
+    var campsH = awards ? '💎 VÍŤAZNÉ KAMPANE PRE INŠPIRÁCIU' : '💎 KAMPANE PRE INŠPIRÁCIU';
+    var take = awards
+      ? '<div class="sp-takeaways"><h4>📝 10 VECÍ, KTORÉ SI ODNIESŤ</h4><ol>'+sp.takeaways.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ol></div>' : '';
+    var cards=(sp.campaigns||[]).map(function(c){
+      var links=(c.links||[]).map(function(l){return '<a class="btn '+(l.style||'')+'" href="'+encodeURI(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';}).join('');
+      var win=c.win?'<span class="swin">'+esc(c.win)+'</span>':'';
+      var cposter='<div class="gencover gc-steal"><div class="gc-brand">'+esc(c.brand||'')+'</div><div class="gc-emoji">💎</div><div class="gc-title">'+esc(c.name||'')+'</div></div>';
+      var media=mediaHTML(c,cposter);
+      return '<div class="scard"><div class="smedia">'+media+'</div>'+
+        '<span class="stag">'+esc(c.brand||"INŠPO")+'</span><div class="sname">'+esc(c.name)+win+'</div>'+
+        (c.agency?'<div class="smeta">'+esc(c.agency)+'</div>':'')+'<div class="stldr">'+esc(c.tldr)+'</div>'+links+'</div>';
+    }).join('');
+    var sec=document.createElement("section"); sec.className="specialzone"; sec.id="special"; sec.dataset.pool="steal";
+    sec.innerHTML='<div class="sp-top">'+(kick?'<div class="sp-kick">'+kick+'</div>':'')+'<div class="sp-title">'+heading+'</div>'+
+      (sp.blurb?'<div class="sp-blurb">'+esc(sp.blurb)+'</div>':'')+'</div>'+take+
+      '<div class="sp-camps-h">'+campsH+'</div>'+cards;
+    shost.innerHTML=''; shost.appendChild(sec);
+  }
+  renderSpecial();
+
+  // ===== SOCIAL MEDIA TRENDS =====
+  function renderSocial(){
+    var s=data.social, host=document.getElementById("socialhost");
+    if(!host) return;
+    var trends=(s&&s.trends)||[];
+    var cards=trends.map(function(t){
+      var links=(t.links||[]).map(function(l){return '<a class="btn '+(l.style||'')+'" href="'+encodeURI(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';}).join('');
+      var plat=t.platform?'<span class="plat">'+esc(t.platform)+'</span>':'';
+      var tposter='<div class="gencover gc-social"><div class="gc-brand">'+esc(t.platform||'')+'</div><div class="gc-emoji">'+(t.emoji||'📱')+'</div><div class="gc-title">'+esc(t.title||'')+'</div></div>';
+      var media=mediaHTML(t,tposter);
+      return '<div class="scard"><div class="smedia">'+media+'</div>'+
+        '<span class="stag">'+esc(t.emoji||'📱')+'</span><div class="sname">'+esc(t.title)+plat+'</div>'+
+        '<div class="stldr">'+esc(t.tldr||'')+'</div>'+links+'</div>';
+    }).join('');
+    if(!cards){ cards='<div class="emptyunit"><span class="big">📱</span>Tento týždeň sme trendy ešte nestihli — research beží každý pondelok.</div>'; }
+    var sec=document.createElement("section"); sec.className="specialzone socialzone"; sec.id="social-sec"; sec.dataset.pool="social";
+    sec.innerHTML='<div class="sp-top"><div class="sp-kick">📱 ČO FIČÍ NA SOCKÁCH</div>'+
+      '<div class="sp-title" style="color:#00f0ff; filter:drop-shadow(4px 4px 0 #ff2e97) drop-shadow(7px 7px 0 rgba(0,0,0,.5));">SOCIAL TRENDS</div>'+
+      ((s&&s.blurb)?'<div class="sp-blurb">'+esc(s.blurb)+'</div>':'')+'</div>'+cards;
+    host.innerHTML=''; host.appendChild(sec);
+  }
+  renderSocial();
+
+  // ===== KONKURENCIA =====
+  function compCardHTML(it, unit){
+    var links=(it.links||[]).map(function(l){return '<a class="btn '+(l.style||'')+'" href="'+encodeURI(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';}).join('');
+    var poster='<div class="gencover gc-'+unit.key+'"><div class="gc-brand">'+esc(it.brand||'')+'</div><div class="gc-emoji">'+(it.emoji||'📣')+'</div><div class="gc-title">'+esc(it.headline)+'</div></div>';
+    return '<div class="card">'+
+      '<div class="body">'+
+        '<span class="tag" style="background:'+unit.tag+'">'+esc(it.brand||'KONKURENCIA')+'</span>'+
+        '<div class="head"><span class="emoji">'+(it.emoji||'📣')+'</span> '+esc(it.headline)+'</div>'+
+        (it.orig?'<div class="orig">'+esc(it.orig)+'</div>':'')+
+        '<div class="tldr">'+(it.tldr||'')+'</div>'+ links +
+      '</div>'+
+      '<div class="media"><div class="thumbframe">'+ mediaHTML(it,poster) +'</div></div>'+
+    '</div>';
+  }
+
+  // ===== render per-unit: CLIENT NEWS + KONKURENCIA =====
+  UNITS.forEach(function(u){
+    var chost=document.getElementById("clients-"+u.key);
+    if(chost){
+      var items=(data.items||[]).filter(function(it){ return UNIT_OF[it.client] && UNIT_OF[it.client].key===u.key; });
+      var logos=u.clients.map(logoTile).join("");
+      var inner=items.length?items.map(function(it){return cardHTML(it,u);}).join("")
+        : '<div class="emptyunit"><span class="big">😾</span>'+esc(u.empty)+'</div>';
+      var fact=(data.funFacts&&data.funFacts[u.key])
+        ? '<div class="unitfact"><span class="uflabel">☞ FUN FACT ☜</span>'+esc(data.funFacts[u.key])+'</div>' : '';
+      var sec=document.createElement("section"); sec.className="zone "+u.key; sec.id="cl-"+u.key; sec.dataset.pool=u.key;
+      sec.innerHTML='<div class="ztop"><div class="ztitle">'+esc(u.name)+'</div><br><span class="zsub">'+esc(u.tagline)+'</span>'+
+        '<div class="logos">'+logos+'</div></div>'+inner+fact;
+      chost.appendChild(sec);
+    }
+    var khost=document.getElementById("konk-"+u.key);
+    if(khost){
+      var comp=((data.competitors||{})[u.key])||[];
+      var kinner;
+      if(comp.length){ kinner=comp.map(function(it){return compCardHTML(it,u);}).join(""); }
+      else if(data.competitorsPending){ kinner='<div class="emptyunit"><span class="big">⏳</span>Konkurencia sa dopĺňa v <b>pondelkovom browser passe</b> (strategie / omediach / medialne — čítané cez prehliadač). Ešte nie je hotová, checkni po rannom behu.</div>'; }
+      else { kinner='<div class="emptyunit"><span class="big">🤷</span>Za posledných 7 dní žiadna čerstvá konkurenčná kampaň pre '+esc(u.name)+'.</div>'; }
+      var ksec=document.createElement("section"); ksec.className="zone "+u.key; ksec.id="kk-"+u.key; ksec.dataset.pool=u.key;
+      ksec.innerHTML='<div class="ztop"><div class="ztitle">'+esc(u.name)+'</div><br><span class="zsub">🔥 Konkurencia · '+esc(u.compTagline||u.tagline)+'</span></div>'+kinner;
+      khost.appendChild(ksec);
+    }
+  });
+
+  function renderSong(){
+    var s=data.songOfWeek, host=document.getElementById("songhost");
+    if(!s || !s.spotify || !host) return;
+    var kind="track", id=String(s.spotify);
+    var mm=id.match(/(track|playlist|album|episode)\/([A-Za-z0-9]+)/);
+    if(mm){ kind=mm[1]; id=mm[2]; }
+    var embed="https://open.spotify.com/embed/"+kind+"/"+encodeURIComponent(id)+"?utm_source=generator";
+    host.hidden=false;
+    host.innerHTML='<section class="sotw"><div class="sotw-kick">🎧 PESNIČKA TÝŽDŇA 🎧</div>'+
+      (s.title?'<div class="sotw-title">'+esc(s.title)+'</div>':'')+
+      '<div class="sotw-embed"><iframe src="'+embed+'" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify"></iframe></div></section>';
+  }
+  renderSong();
+
+  // ===== gify porozhadzované v pozadí (len viditeľné sekcie) =====
+  var wrapEl = document.querySelector(".wrap");
+  var unitGifs = assets.unitGifs || {};
+  function placeBg(){
+    var layer = document.getElementById("bgstickers");
+    if(!layer || !wrapEl) return;
+    layer.innerHTML = "";
+    var sbg = document.getElementById("sectionbg"); if(sbg) sbg.innerHTML="";
+    var vw = window.innerWidth;
+    var wr = wrapEl.getBoundingClientRect();
+    var bgTop = layer.getBoundingClientRect().top;
+    function scatter(zone, gifs){
+      if(!zone || !gifs || !gifs.length) return;
+      var zr = zone.getBoundingClientRect();
+      var zTop = zr.top - bgTop, zH = zr.height;
+      var left=[], right=[];
+      gifs.forEach(function(g,idx){ (idx%2===0 ? left : right).push(g); });
+      [["L",left],["R",right]].forEach(function(pair){
+        var side=pair[0], arr=pair[1], n=arr.length; if(!n) return;
+        var pad=16, usable=Math.max(60, zH - pad*2), step=usable/n;
+        var size=Math.max(74, Math.min(172, Math.round(step*0.9)));
+        arr.forEach(function(g,k){
+          var y = zTop + pad + step*(k+0.5) - size/2;
+          var stag = (k%2===0) ? 0 : 1, over = size*0.10, x;
+          if(side==="L"){ x = (wr.left - size + over) - stag*(size*0.34); if(x < -size*0.5) x = -size*0.5; }
+          else { x = (wr.right - over) + stag*(size*0.34); var rmax = vw - size*0.5; if(x > rmax) x = rmax; }
+          var rot = ((k*37 + (side==="L"?0:19)) % 34) - 17;
+          var img = document.createElement("img");
+          img.className="bgsticker"; img.src=g; img.alt=""; img.title="chyť a ťahaj ma! ✊";
+          img.style.cssText = "left:"+Math.round(x)+"px;top:"+Math.round(y)+"px;width:"+size+"px;transform:rotate("+rot+"deg);";
+          layer.appendChild(img);
+        });
+      });
+    }
+    var groups={};
+    Array.prototype.forEach.call(document.querySelectorAll("[data-pool]"), function(sec){
+      if(sec.offsetParent===null) return;
+      (groups[sec.dataset.pool] = groups[sec.dataset.pool] || []).push(sec);
+    });
+    Object.keys(groups).forEach(function(pk){
+      var gifs=(unitGifs[pk]||[]).slice();
+      for(var i=gifs.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=gifs[i]; gifs[i]=gifs[j]; gifs[j]=t; }
+      var secs=groups[pk], nS=secs.length, per=Math.max(1, Math.floor(gifs.length/nS));
+      secs.forEach(function(sec,i){
+        var slice = nS>1 ? gifs.slice(i*per, i===nS-1 ? gifs.length : (i+1)*per) : gifs;
+        scatter(sec, slice);
+      });
+    });
+  }
+  var rt; function schedule(){ clearTimeout(rt); rt=setTimeout(placeBg,120); }
+  window.addEventListener("load", placeBg);
+  window.addEventListener("resize", schedule);
+
+  // ===== ťahanie gifov =====
+  var playground = document.createElement("div"); playground.id = "playground";
+  (document.querySelector(".stage") || document.body).appendChild(playground);
+  var drag = null;
+  document.addEventListener("pointerdown", function(e){
+    var img = e.target && e.target.closest ? e.target.closest(".bgsticker") : null;
+    if(!img) return;
+    e.preventDefault();
+    if(img.parentNode !== playground) playground.appendChild(img);
+    var pg = playground.getBoundingClientRect();
+    var curLeft = parseFloat(img.style.left)||0, curTop = parseFloat(img.style.top)||0;
+    img.classList.add("grabbing");
+    drag = { img: img, dx: e.clientX - (pg.left + curLeft), dy: e.clientY - (pg.top + curTop) };
+    try { img.setPointerCapture(e.pointerId); } catch(_){}
+  });
+  document.addEventListener("pointermove", function(e){
+    if(!drag) return;
+    var pg = playground.getBoundingClientRect();
+    drag.img.style.left = (e.clientX - pg.left - drag.dx) + "px";
+    drag.img.style.top  = (e.clientY - pg.top  - drag.dy) + "px";
+  });
+  function endDrag(){ if(drag){ drag.img.classList.remove("grabbing"); drag = null; } }
+  document.addEventListener("pointerup", endDrag);
+  document.addEventListener("pointercancel", endDrag);
+
+  // ===== prepínanie viewov (2 tlačidlá → svet / doma → unity) =====
+  document.documentElement.style.setProperty('--nav-h','12px');
+  var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+  function showView(id, push){
+    var found=false;
+    views.forEach(function(v){ var on=(v.id===id); v.hidden=!on; if(on) found=true; });
+    if(!found){ views.forEach(function(v){ v.hidden=(v.id!=='view-home'); }); id='view-home'; }
+    try{ window.scrollTo(0,0); }catch(e){}
+    if(push!==false && location.hash!=='#'+id){ try{ history.pushState(null,'','#'+id); }catch(e){ location.hash=id; } }
+    requestAnimationFrame(placeBg); setTimeout(placeBg,130); setTimeout(placeBg,420);
+  }
+  document.addEventListener('click', function(e){
+    var g=e.target.closest?e.target.closest('[data-go]'):null;
+    if(g){ e.preventDefault(); showView(g.getAttribute('data-go')); return; }
+    var b=e.target.closest?e.target.closest('[data-back]'):null;
+    if(b){ e.preventDefault(); showView(b.getAttribute('data-back')); return; }
+  });
+  window.addEventListener('popstate', function(){
+    var h=(location.hash||'').replace('#','')||'view-home';
+    showView(h, false);
+  });
+  (function initView(){
+    var h=(location.hash||'').replace('#','');
+    showView((h && document.getElementById(h)) ? h : 'view-home', false);
+  })();
+
+  requestAnimationFrame(placeBg); setTimeout(placeBg,300); setTimeout(placeBg,1200);
+})();
+</script>
+
+<script>
+/* pesnička na pozadí – autoplay pri prvej interakcii + prepínacie tlačidlo */
+(function(){
+  var bank={}; try{ bank=JSON.parse(document.getElementById("ASSET_BANK").textContent); }catch(e){}
+  if(!bank.song) return;
+  var audio=document.createElement("audio"); audio.loop=true; audio.preload="auto"; audio.src=bank.song; audio.volume=0.6;
+  document.body.appendChild(audio);
+  var btn=document.createElement("button"); btn.id="musicbtn"; btn.type="button";
+  btn.innerHTML='🔇 <span>ZAPNI HUDBU</span>'; document.body.appendChild(btn);
+  var playing=false, manualStop=false;
+  function setOn(on){ playing=on; if(on){btn.classList.add("on"); btn.innerHTML='🔊 <span>HUDBA HRÁ</span>';} else {btn.classList.remove("on"); btn.innerHTML='🔇 <span>ZAPNI HUDBU</span>';} }
+  function start(){ var p=audio.play(); if(p&&p.catch) p.catch(function(){}); setOn(true); }
+  function stop(){ audio.pause(); setOn(false); }
+  btn.addEventListener("click", function(){ if(playing){ stop(); manualStop=true; } else { start(); manualStop=false; } });
+  window.addEventListener("load", function(){ try{ start(); }catch(e){} });
+  ["pointerdown","keydown","touchstart","scroll","wheel"].forEach(function(ev){
+    window.addEventListener(ev, function h(){ window.removeEventListener(ev,h); if(!manualStop) start(); }, {passive:true});
+  });
+})();
+</script>
+
+</body></html>
+
+</body></html></body></html>
