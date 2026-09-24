@@ -373,7 +373,7 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
-<link rel="stylesheet" href="newsletter.css?v=20260924-gifs-song3">
+<link rel="stylesheet" href="newsletter.css?v=20260924-song-button4">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
@@ -957,20 +957,27 @@ body,html{margin:0;padding:0;}
   });
 
   function renderSong(){
-    var s=data.songOfWeek, host=document.getElementById("songhost");
-    if(!s || !s.spotify || !host) return;
-    var kind="track", id=String(s.spotify);
-    var mm=id.match(/(track|playlist|album|episode)\/([A-Za-z0-9]+)/);
-    if(mm){ kind=mm[1]; id=mm[2]; }
-    var embed="https://open.spotify.com/embed/"+kind+"/"+encodeURIComponent(id)+"?utm_source=generator";
-    host.hidden=false;
-    host.innerHTML='<section class="sotw"><div class="sotw-kick">♫ SONG OF THE WEEK</div>'+
-      '<div class="song-heading"><span class="song-disc" aria-hidden="true">♫</span><div><div class="sotw-title">'+esc(s.title||'Song of the week')+'</div><div class="song-artist">'+esc(s.artist||'')+'</div></div></div>'+
-      '<audio id="weekly-audio" controls preload="none" aria-label="Song of the week — '+esc(s.artist)+' — '+esc(s.title)+'" src="'+esc(assets.song)+'"></audio>'+
-      '<div class="song-actions"><a href="https://open.spotify.com/'+kind+'/'+encodeURIComponent(id)+'" target="_blank" rel="noopener noreferrer">Otvoriť v Spotify ↗</a></div></section>';
-    var weeklyAudio=host.querySelector('audio');
-    window.addEventListener('newsletter:video',function(){weeklyAudio.pause();});
-    host.querySelector('a').addEventListener('click',function(){weeklyAudio.pause();});
+    var s=data.songOfWeek;
+    if(!s || !assets.song) return;
+    var audio=document.createElement('audio');
+    audio.id='weekly-audio';audio.preload='none';audio.src=assets.song;audio.volume=0.6;
+    document.body.appendChild(audio);
+    var button=document.createElement('button');button.id='musicbtn';button.type='button';
+    document.body.appendChild(button);
+    function update(){
+      var playing=!audio.paused;
+      button.classList.toggle('on',playing);
+      button.textContent=playing ? '♫ '+s.title+' - '+s.artist : '▶ pustiť pesničku týždňa';
+      button.setAttribute('aria-pressed',String(playing));
+      button.title=playing ? 'Pozastaviť pesničku týždňa' : 'Prehrať '+s.title+' - '+s.artist;
+    }
+    button.addEventListener('click',function(){
+      if(!audio.paused){audio.pause();return;}
+      audio.play().catch(function(){update();button.title='Prehrávanie sa nepodarilo. Skús znova.';});
+    });
+    ['play','pause','ended','error'].forEach(function(event){audio.addEventListener(event,update);});
+    window.addEventListener('newsletter:video',function(){audio.pause();});
+    update();
   }
   renderSong();
 
@@ -1084,5 +1091,5 @@ body,html{margin:0;padding:0;}
 </script>
 
 
-<script src="newsletter.js?v=20260924-gifs-song3"></script>
+<script src="newsletter.js?v=20260924-song-button4"></script>
 </body></html>
