@@ -373,11 +373,12 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
-<link rel="stylesheet" href="newsletter.css">
+<link rel="stylesheet" href="newsletter.css?v=20260924-gifs-song3">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
   "week": "21.–27. september 2026",
+  "songOfWeek": {"title":"Kids","artist":"Current Joys","spotify":"https://open.spotify.com/track/6cMMZ2pdP4PkYsVJqX2WUh"},
   "verifiedRange": "16.–23. 9. 2026",
   "competitorsPending": false,
   "funFacts": {
@@ -963,9 +964,13 @@ body,html{margin:0;padding:0;}
     if(mm){ kind=mm[1]; id=mm[2]; }
     var embed="https://open.spotify.com/embed/"+kind+"/"+encodeURIComponent(id)+"?utm_source=generator";
     host.hidden=false;
-    host.innerHTML='<section class="sotw"><div class="sotw-kick">🎧 PESNIČKA TÝŽDŇA 🎧</div>'+
-      (s.title?'<div class="sotw-title">'+esc(s.title)+'</div>':'')+
-      '<div class="sotw-embed"><iframe src="'+embed+'" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify"></iframe></div></section>';
+    host.innerHTML='<section class="sotw"><div class="sotw-kick">♫ SONG OF THE WEEK</div>'+
+      '<div class="song-heading"><span class="song-disc" aria-hidden="true">♫</span><div><div class="sotw-title">'+esc(s.title||'Song of the week')+'</div><div class="song-artist">'+esc(s.artist||'')+'</div></div></div>'+
+      '<audio id="weekly-audio" controls preload="none" aria-label="Song of the week — '+esc(s.artist)+' — '+esc(s.title)+'" src="'+esc(assets.song)+'"></audio>'+
+      '<div class="song-actions"><a href="https://open.spotify.com/'+kind+'/'+encodeURIComponent(id)+'" target="_blank" rel="noopener noreferrer">Otvoriť v Spotify ↗</a></div></section>';
+    var weeklyAudio=host.querySelector('audio');
+    window.addEventListener('newsletter:video',function(){weeklyAudio.pause();});
+    host.querySelector('a').addEventListener('click',function(){weeklyAudio.pause();});
   }
   renderSong();
 
@@ -978,7 +983,7 @@ body,html{margin:0;padding:0;}
     layer.innerHTML = "";
     var sbg = document.getElementById("sectionbg"); if(sbg) sbg.innerHTML="";
     var vw = window.innerWidth;
-    if(vw <= 1100 || window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+    if(vw <= 1100) return;
     var wr = wrapEl.getBoundingClientRect();
     var bgTop = layer.getBoundingClientRect().top;
     function scatter(zone, gifs){
@@ -998,7 +1003,7 @@ body,html{margin:0;padding:0;}
           else { x = (wr.right - over) + stag*(size*0.34); var rmax = vw - size*0.5; if(x > rmax) x = rmax; }
           var rot = ((k*37 + (side==="L"?0:19)) % 34) - 17;
           var img = document.createElement("img");
-          img.className="bgsticker"; img.loading="lazy"; img.decoding="async"; img.src=g; img.alt=""; img.title="chyť a ťahaj ma! ✊";
+          img.className="bgsticker"; img.decoding="async"; img.src=g; img.alt=""; img.title="chyť a ťahaj ma! ✊";
           img.style.cssText = "left:"+Math.round(x)+"px;top:"+Math.round(y)+"px;width:"+size+"px;transform:rotate("+rot+"deg);";
           layer.appendChild(img);
         });
@@ -1078,26 +1083,6 @@ body,html{margin:0;padding:0;}
 })();
 </script>
 
-<script>
-/* pesnička na pozadí – autoplay pri prvej interakcii + prepínacie tlačidlo */
-(function(){
-  var bank={}; try{ bank=JSON.parse(document.getElementById("ASSET_BANK").textContent); }catch(e){}
-  if(!bank.song) return;
-  var audio=document.createElement("audio"); audio.loop=true; audio.preload="auto"; audio.src=bank.song; audio.volume=0.6;
-  document.body.appendChild(audio);
-  var btn=document.createElement("button"); btn.id="musicbtn"; btn.type="button";
-  btn.innerHTML='🔇 <span>ZAPNI HUDBU</span>'; document.body.appendChild(btn);
-  var playing=false, manualStop=false;
-  function setOn(on){ playing=on; if(on){btn.classList.add("on"); btn.innerHTML='🔊 <span>HUDBA HRÁ</span>';} else {btn.classList.remove("on"); btn.innerHTML='🔇 <span>ZAPNI HUDBU</span>';} }
-  function start(){ var p=audio.play(); if(p&&p.catch) p.catch(function(){}); setOn(true); }
-  function stop(){ audio.pause(); setOn(false); }
-  window.addEventListener("newsletter:video", function(){stop();manualStop=true;});
-  btn.addEventListener("click", function(){ if(playing){ stop(); manualStop=true; } else { start(); manualStop=false; } });
-  window.addEventListener("load", function(){ try{ start(); }catch(e){} });
-  ["pointerdown","keydown","touchstart","scroll","wheel"].forEach(function(ev){
-    window.addEventListener(ev, function h(){ window.removeEventListener(ev,h); if(!manualStop) start(); }, {passive:true});
-  });
-})();
-</script>
-<script src="newsletter.js"></script>
+
+<script src="newsletter.js?v=20260924-gifs-song3"></script>
 </body></html>
