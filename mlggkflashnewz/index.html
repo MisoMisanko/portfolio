@@ -301,10 +301,10 @@ body,html{margin:0;padding:0;}
     <div class="chcemwrap"><div class="chcem">ČO NOVÉ?</div></div>
     <div class="pickline">klikni a vyber si 👇</div>
     <div class="homegrid">
-      <button class="bigbtn bb-svet" data-go="view-world"><span class="bbico">🌍</span><span class="bbtxt">ČO NOVÉ VO SVETE<small>najlepšie kampane pre inšpiráciu</small></span></button>
-      <button class="bigbtn bb-doma" data-go="view-doma"><span class="bbico">🏠</span><span class="bbtxt">ČO NOVÉ DOMA<small>klienti, konkurencia &amp; social — po unitoch</small></span></button>
+      <button class="bigbtn bb-svet" data-stamp="01 / SVETOVÉ INŠPO" data-go="view-world"><span class="bbico">🌍</span><span class="bbtxt">ČO NOVÉ VO SVETE<small>najlepšie kampane pre inšpiráciu</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button>
+      <button class="bigbtn bb-doma" data-stamp="02 / DOMÁCI PREHĽAD" data-go="view-doma"><span class="bbico">🏠</span><span class="bbtxt">ČO NOVÉ DOMA<small>klienti, konkurencia &amp; social — po unitoch</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button>
     </div>
-    <div class="homehint">MLGGK Flash Newz · auto-update každý pondelok</div>
+    <div class="homehint">MLGGK Flash Newz · tvoja pravidelná dávka inšpirácie</div>
   </div>
 
   <!-- ===== SVET (kampane) ===== -->
@@ -373,36 +373,89 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
+<link rel="stylesheet" href="newsletter.css">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
   "week": "21.–27. september 2026",
   "verifiedRange": "16.–23. 9. 2026",
-  "competitorsPending": true,
+  "competitorsPending": false,
   "funFacts": {
     "yellow": "SPP má zásobníky na zimu narvaté po strop — rekordných ~17,5 TWh plynu. Nech si vonku mrzne koľko chce, kúriť budeme.",
     "cyan": "Najmladší človek, čo cez ČSOB investuje cez AI, má presne jeden rok. Ešte nevie povedať 'úrok', ale portfólio už jede.",
     "blue": "Nové VW ID.3 GTI má 326 koní a poháňa zadné kolesá — prvé GTI v histórii, čo ti reálne 'hrabe zadnými'. RIP predné náhony."
   },
   "competitors": {
-    "yellow": [],
-    "cyan": [
+    "yellow": [
       {
-        "brand": "Tatra banka",
-        "emoji": "🤖",
-        "headline": "Celý vizuál kampane spravila AI",
-        "tldr": "Tatra banka mení spôsob výroby reklamy — <span class='hi'>celú vizuálnu stránku novej kampane vytvorila umelá inteligencia</span>. Konkurencia v cyan unite ide plný AI mód.",
-        "thumb": "",
+        "brand": "Lidl",
+        "emoji": "🎤",
+        "headline": "Krímeš je späť. A tentoraz zbiera Lidl Body.",
+        "tldr": "Lidl a daren&curtis vytiahli Marcina s Krausom, pridali známy hudobný motív a z vysvetľovania vernostnej appky spravili popkultúrny comeback. <span class=\"hi\">Nostalgia najskôr, produkt hneď za ňou.</span> Stratégie priniesli zákulisie 21. septembra; samotná kampaň beží od 10. septembra.",
+        "orig": "Slovensko · publikované 21. 9. 2026",
+        "thumb": "assets/news-c84f2868be68.jpg",
+        "yt": "EQs9cuE2pQQ",
         "links": [
           {
-            "label": "🔗 Strategie",
-            "url": "https://strategie.hnonline.sk/news/marketing/96303628-tatra-banka-meni-sposob-vyroby-reklamy-celu-vizualnu-stranku-kampane-vytvorila-ai",
+            "label": "🔗 Stratégie (21. 9. 2026)",
+            "url": "https://strategie.hnonline.sk/news/marketing/96303343-lidl-s-novou-kampanou-rozosmeje-nejedneho-divaka-vratil-legendarny-krimes",
             "style": ""
           }
         ]
       }
     ],
-    "blue": []
+    "cyan": [
+      {
+        "brand": "Tatra banka",
+        "emoji": "🤖",
+        "headline": "Administratívu pustite z hlavy. Vizuál pustite cez AI.",
+        "tldr": "Echt brands a SORRYWECAN ukazujú podnikateľom, ako presunúť faktúry a doklady z hlavy do bankovej appky. <span class=\"hi\">Celá vizuálna časť vznikla pomocou AI</span>, ale so zámerne surovým filmovým vzhľadom. Kampaň beží od 15. septembra; čerstvý článok rozoberá jej produkciu.",
+        "orig": "Slovensko · publikované 22. 9. 2026",
+        "thumb": "assets/news-60ae2751831b.jpg",
+        "yt": "thLx4hkoJL4",
+        "links": [
+          {
+            "label": "🔗 Stratégie (22. 9. 2026)",
+            "url": "https://strategie.hnonline.sk/news/marketing/96303628-tatra-banka-meni-sposob-vyroby-reklamy-celu-vizualnu-stranku-kampane-vytvorila-ai",
+            "style": ""
+          }
+        ]
+      },
+      {
+        "brand": "Kooperativa",
+        "emoji": "🇮🇹",
+        "headline": "Škrabanec na aute? AutoMat, ragazzi!",
+        "tldr": "Dvaja Taliani sledujú turistov, ktorí si odrú auto o lampu. Slovenský vodič sa však nerozčúli: objavil pekný kostolík a má AutoMat. THIS IS LOCCO mení poistnú udalosť na malý dovolenkový príbeh. <span class=\"hi\">Benefit cez pokoj v hlave, nie cez strašenie.</span>",
+        "orig": "Slovensko · publikované 23. 9. 2026",
+        "thumb": "assets/news-d02d365c5908.jpg",
+        "yt": "gy-MeTGCx7I",
+        "links": [
+          {
+            "label": "🔗 Stratégie (23. 9. 2026)",
+            "url": "https://strategie.hnonline.sk/news/marketing/96303804-kooperativa-prinasa-v-novej-kampani-na-slovensko-kus-pozitivneho-talianska",
+            "style": ""
+          }
+        ]
+      }
+    ],
+    "blue": [
+      {
+        "brand": "Kia",
+        "emoji": "🏕️",
+        "headline": "Seltos predáva výlet aj s blatom, dažďom a uleteným stanom.",
+        "orig": "Európa · publikované 22. 9. 2026",
+        "tldr": "Európska kampaň <span class=\"hi\">Built for Real Life</span> od INNOCEAN Berlin sa vykašľala na dokonalé SUV dobrodružstvo. Film ukazuje štyri výlety, ktoré nejdú podľa plánu, do optimistickej skladby od A-ha. Konkurencia v kategórii áut; ide o európsku komunikáciu, nie o potvrdený slovenský launch.",
+        "thumb": "assets/news-d926df4a24ef.jpg",
+        "video": "https://marcommnews.com/wp-content/uploads/2026/09/Seltos_HEV_XLine_MY27_60s_Long-Film_16x9_FULLHD.mp4",
+        "links": [
+          {
+            "label": "🔗 Marketing Communication News (22. 9. 2026)",
+            "url": "https://marcommnews.com/innocean-berlin-challenges-the-fantasy-of-adventure-with-the-launch-of-the-kia-all-new-seltos/",
+            "style": ""
+          }
+        ]
+      }
+    ]
   },
   "social": {
     "blurb": "Čo tento týždeň valcuje feed — 5 trendov, čo sa oplatí odkukať skôr, než ich prevalcuje niekto rýchlejší.",
@@ -412,7 +465,7 @@ body,html{margin:0;padding:0;}
         "platform": "TikTok",
         "emoji": "💇‍♀️",
         "tldr": "Deadpan zoznam, kde každý 'dôvod' je len slovo 'bob', na tracku od Fat Papi. Značka si tam vloží vlastný gag — <span class='hi'>kaderníctva a beauty e-shopy</span> sedia najviac, ale otočíš to na hocičo ('dôvody kúpiť si…').",
-        "thumb": "https://www.socialpilot.co/wp-content/uploads/2025/02/tiktok-trends.webp",
+        "thumb": "assets/news-377c85c30df9.jpg",
         "links": [
           {
             "label": "🔗 SocialPilot",
@@ -426,7 +479,7 @@ body,html{margin:0;padding:0;}
         "platform": "TikTok",
         "emoji": "💃",
         "tldr": "Súťaživý one-take tanec na Sevdaliza 'Alibi', kde sa creatori predbiehajú v čistej choreo. Pre tímové/office značky ideál — <span class='hi'>celý tím na jeden záber</span> ako employer branding.",
-        "thumb": "https://www.socialpilot.co/wp-content/uploads/2025/02/tiktok-trends.webp",
+        "thumb": "assets/news-377c85c30df9.jpg",
         "links": [
           {
             "label": "🔗 SocialPilot",
@@ -454,7 +507,7 @@ body,html{margin:0;padding:0;}
         "platform": "Reels",
         "emoji": "🍂",
         "tldr": "Bezslovná montáž jesenných rituálov — teplý nápoj, vrstvenie, pomalé ráno — na cozy audio. Pre CEE zlato: <span class='hi'>kaviarne, čajovne, drogérie, móda</span> spravia 'slovenskú jeseň' — hmla, kapučíno, sveter, Tatry, žiadny tvrdý predaj.",
-        "thumb": "https://www.datocms-assets.com/151374/1773070097-influencer-marketing-trends-blog-post.jpg",
+        "thumb": "assets/news-231b3fdfa6d9.jpg",
         "links": [
           {
             "label": "🔗 NewEngen",
@@ -468,7 +521,7 @@ body,html{margin:0;padding:0;}
         "platform": "Reels",
         "emoji": "🤡",
         "tldr": "Anti-highlight reel: namiesto naleštených výhier postneš svoje prúsery a bloopre. Autenticita play. Pre skeptické CEE publikum <span class='hi'>'naše najväčšie prúsery tento rok'</span> so sebairóniou funguje extra dobre.",
-        "thumb": "https://www.datocms-assets.com/151374/1773070097-influencer-marketing-trends-blog-post.jpg",
+        "thumb": "assets/news-231b3fdfa6d9.jpg",
         "links": [
           {
             "label": "🔗 NewEngen",
@@ -491,7 +544,7 @@ body,html{margin:0;padding:0;}
         "agency": "Leo UK",
         "win": "",
         "tldr": "McDonald's cez social listening zistil, po ktorých zahraničných jedlách ľudia najviac slintajú, a potom ich 'prebral' z ôsmich krajín na UK menu — celé zabalené do heist príbehu s creatormi. Data → limitka → sranda.",
-        "thumb": "https://www.famouscampaigns.com/wp-content/uploads/2026/09/menu-heist-mcdonalds-2.png",
+        "thumb": "assets/news-949af7d34430.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Famous Campaigns)",
@@ -506,14 +559,15 @@ body,html{margin:0;padding:0;}
         "agency": "adam&eve/TBWA",
         "win": "",
         "tldr": "Značka topánok ti platí 135 libier za fotku tvojich bosých nôh v prírode. Anti-topánková stunt kampaň od výrobcu topánok. Absolútny galaxy-brain move.",
-        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/c2d6fbafe1/feet-fun-columbia-adam-eve.jpg",
+        "thumb": "assets/news-683950784f3b.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Creative Salon)",
             "url": "https://creative.salon/articles/work/columbia-sportswear-fpoundpoundt-fund-adam-eve-tbwa",
             "style": ""
           }
-        ]
+        ],
+        "yt": "ijdNFN6B-xU"
       },
       {
         "name": "Candy Country (Shania Twain x Zedd)",
@@ -521,14 +575,15 @@ body,html{margin:0;padding:0;}
         "agency": "Pablo London",
         "win": "",
         "tldr": "Candy Crush prerobil Shania Twain 'You're Still the One' so Zeddom na klip a schoval doň easter eggy = cross-platform honba za pokladom. Z pesničky sa stala hra.",
-        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/1b95af4457/candy-crush-country-pablo.jpg",
+        "thumb": "assets/news-7fbd4012fa95.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Creative Salon)",
             "url": "https://creative.salon/articles/work/candy-crush-shania-twain-candy-country-pablo-london",
             "style": ""
           }
-        ]
+        ],
+        "yt": "tHi_MCC-c5Y"
       },
       {
         "name": "Pure News, Straight from the Source",
@@ -536,14 +591,15 @@ body,html{margin:0;padding:0;}
         "agency": "Gravity Road",
         "win": "",
         "tldr": "Dva 15-sekundové spoty, kde voda v laborke ukazuje, ako sa info 'zakalí' cestou od zdroja k tebe. Reuters = čistý zdroj. Abstraktný claim cez jeden fyzický experiment.",
-        "thumb": "https://img2.storyblok.com/560x300/f/102932/1920x1080/7cfaa44c02/gravity-road-reuters.jpg",
+        "thumb": "assets/news-4f0a97f63cbb.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Creative Salon)",
             "url": "https://creative.salon/articles/work/gravity-road-reuters-the-source",
             "style": ""
           }
-        ]
+        ],
+        "yt": "vuVmhlGZzRQ"
       },
       {
         "name": "For All Wheelkind",
@@ -551,14 +607,15 @@ body,html{margin:0;padding:0;}
         "agency": "Dentsu Creative UK",
         "win": "",
         "tldr": "Halfords zjednotil celý svoj bordel produktov pod jednu ľudskú myšlienku — oslavu každého vzťahu človek + vozidlo, s humorom. Z nudného retailu značka s dušou.",
-        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/b57eb40671/for-all-wheelkind-halfords.jpg",
+        "thumb": "assets/news-1c3b8cfcebec.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Creative Salon)",
             "url": "https://creative.salon/articles/work/for-all-wheelkind-halfords-dentsu-creative-uk",
             "style": ""
           }
-        ]
+        ],
+        "yt": "JNqY5xM3PnA"
       },
       {
         "name": "Get Busy Living (Business Banking)",
@@ -566,14 +623,15 @@ body,html{margin:0;padding:0;}
         "agency": "BBH London",
         "win": "",
         "tldr": "Monzo natiahol svoju obľúbenú consumer platformu do B2B — tri filmy o tom, ako features oslobodia podnikateľa od admin pekla. Bez vymýšľania novej identity.",
-        "thumb": "https://img2.storyblok.com/560x300/f/102932/1240x697/755da5a9be/monzo-get-busy-living-business-bbh-london.jpg",
+        "thumb": "assets/news-88c9269b9712.jpg",
         "links": [
           {
             "label": "🔗 O kampani (Creative Salon)",
             "url": "https://creative.salon/articles/work/monzo-get-busy-living-business-bbh-london",
             "style": ""
           }
-        ]
+        ],
+        "yt": "Hkpian7FKbM"
       }
     ]
   },
@@ -593,7 +651,7 @@ body,html{margin:0;padding:0;}
       "headline": "SPP má na zimu narvaté zásobníky po strop — rekordný objem plynu pripravený pre zákazníkov",
       "orig": "\"SPP bude mať v zásobníkoch pre zákazníkov pripravený rekordný objem zemného plynu\"",
       "tldr": "SPP hlási <span class='hi'>rekordných ~17,5 TWh</span> plynu v zásobníkoch na zimu 2026/2027 — Slovensko je vraj medzi najlepšie pripravenými krajinami EÚ. Nech si vonku mrzne koľko chce.",
-      "thumb": "https://cdn.sita.sk/sites/32/2026/09/gettyimages-2157200194-1200x800.jpg",
+      "thumb": "assets/news-4d22e9036683.jpg",
       "links": [
         {
           "label": "SITA (22. 9. 2026)",
@@ -615,7 +673,7 @@ body,html{margin:0;padding:0;}
       "headline": "V Eurovei pribudli v MINIT pekárničke štyri nové 'Next Level' príchute",
       "orig": "\"Štyri nové príchute v MINIT pekárničke\"",
       "tldr": "MINIT v Eurovei rozbalil štyri nové príchute — <span class='hi'>Cookies & Cream, belgická biela s malinou, pulled pork a burger</span>. Áno, burger v pekárni. Doba pokročila.",
-      "thumb": "https://eurovea.sk/img/containers/social_images/fb-share.png/612bcf9603f688c7ac0524895f07c3de.png",
+      "thumb": "assets/news-c1b51b6ed65e.jpg",
       "links": [
         {
           "label": "Eurovea (17. 9. 2026)",
@@ -637,7 +695,7 @@ body,html{margin:0;padding:0;}
       "headline": "ČSOB v sobotu vyplo firmám bankovníctvo až na 18 hodín — sťahovalo sa na novú platformu",
       "orig": "\"ČSOB v sobotu vypne firmám bankovníctvo až na 18 hodín. Toto stále fungovať bude\"",
       "tldr": "ČSOB v sobotu 19. 9. odstavilo firemné e-bankovníctvo (00:01–18:00) kvôli migrácii na novú platformu, ktorá nabehla v nedeľu. <span class='hi'>Karty a bankomaty jazdili normálne</span>, takže žiadna panika.",
-      "thumb": "https://kryptomagazin.sk/img-upl/2026/09/csob-banka-upozornuje-na-zmenu.webp",
+      "thumb": "assets/news-79466886a5f6.jpg",
       "links": [
         {
           "label": "Kryptomagazín (18. 9. 2026)",
@@ -681,7 +739,7 @@ body,html{margin:0;padding:0;}
       "headline": "Nový VW ID.3 GTI je historicky najvýkonnejšie GTI a poháňa zadné kolesá",
       "orig": "\"Nový Volkswagen ID.3 GTI je historicky najvýkonnejšie GTI a hrabe zadnými\"",
       "tldr": "VW odhalil ID.3 GTI — <span class='hi'>326 koní, zadný náhon, 545 Nm, 600+ km dojazd</span>. Prvé GTI, čo ti reálne hrabe zadnými. Na trh jar 2027.",
-      "thumb": "https://www.topspeed.sk/userfiles/articles/16-09/29143/thumbnail_1280_720_1789551580-volkswagen.id.3.gti.jpg",
+      "thumb": "assets/news-6fa47bfc9ce3.jpg",
       "links": [
         {
           "label": "TopSpeed (16. 9. 2026)",
@@ -703,7 +761,7 @@ body,html{margin:0;padding:0;}
       "headline": "VW predstavil nový Caddy a Multivan — 'úžitkový od slovesa užívať si'",
       "orig": "\"Predstavenie Volkswagen Caddy a Multivan: Úžitkový od slovesa „užívať si!\"",
       "tldr": "Osviežený <span class='hi'>Caddy a Multivan</span> pre slovenský trh, nové verzie dorazili v septembri. Úžitkový, ale s vibe.",
-      "thumb": "https://autovinysk.b-cdn.net/wp-content/uploads/2026/09/New-Caddy_AH_002-2-1024x683.jpg",
+      "thumb": "assets/news-ccc890a9225d.jpg",
       "links": [
         {
           "label": "Autoviny (16. 9. 2026)",
@@ -718,7 +776,8 @@ body,html{margin:0;padding:0;}
       "gifLabel": "Úžitkový glow-up",
       "gifCap": "užívať si"
     }
-  ]
+  ],
+  "competitorRange": "17.–23. 9. 2026"
 }
 </script>
 <!--FLASH_DATA_END-->
@@ -745,11 +804,22 @@ body,html{margin:0;padding:0;}
     porsche:{name:"Porsche Finance"}, cupra:{name:"Cupra"}, seat:{name:"Seat"}
   };
   function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function attr(s){return esc(String(s||'')).replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+  function youtubeId(value){
+    var raw=String(value||'');
+    if(/^[\w-]{11}$/.test(raw)) return raw;
+    var m=raw.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/);return m?m[1]:'';
+  }
   function mediaHTML(o, fallback){
-    if(o && o.yt) return '<iframe class="cardmedia" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(o.yt)+'?rel=0" title="video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+    var id=youtubeId(o&&o.yt), title=attr((o&&(o.headline||o.name||o.title))||'Kampaň');
+    if(id){
+      var poster=o.thumb||('https://i.ytimg.com/vi/'+id+'/hqdefault.jpg');
+      return '<div class="video-shell"><button class="video-launch" data-video-id="'+id+'" aria-label="Prehrať video: '+title+'"><img alt="" loading="lazy" src="'+attr(poster)+'" onerror="this.hidden=true"><span class="play-label"><b aria-hidden="true">▶</b> PREHRAŤ SPOT</span></button><a class="video-out" href="https://www.youtube.com/watch?v='+id+'" target="_blank" rel="noopener">YouTube ↗</a></div>';
+    }
+    if(o&&o.video) return '<div class="video-shell"><video class="cardmedia" controls playsinline preload="none" poster="'+attr(o.thumb)+'" aria-label="'+title+'"><source src="'+attr(o.video)+'" type="video/mp4"></video><a class="video-out" href="'+attr(o.video)+'" target="_blank" rel="noopener">Otvoriť video ↗</a></div>';
     if(o && o.thumb){
       var fb = fallback ? '<div class="mediafallback">'+fallback+'</div>' : '';
-      return '<img class="cardmedia" alt="" loading="lazy" src="'+o.thumb+'" onerror="this.style.display=\'none\';var s=this.nextElementSibling;if(s){s.style.display=\'block\';}">'+fb;
+      return '<img class="cardmedia" alt="'+title+'" loading="lazy" src="'+attr(o.thumb)+'" onerror="this.style.display=\'none\';var s=this.nextElementSibling;if(s){s.style.display=\'block\';}">'+fb;
     }
     return fallback||'';
   }
@@ -880,7 +950,7 @@ body,html{margin:0;padding:0;}
       else if(data.competitorsPending){ kinner='<div class="emptyunit"><span class="big">⏳</span>Konkurencia sa dopĺňa v <b>pondelkovom browser passe</b> (strategie / omediach / medialne — čítané cez prehliadač). Ešte nie je hotová, checkni po rannom behu.</div>'; }
       else { kinner='<div class="emptyunit"><span class="big">🤷</span>Za posledných 7 dní žiadna čerstvá konkurenčná kampaň pre '+esc(u.name)+'.</div>'; }
       var ksec=document.createElement("section"); ksec.className="zone "+u.key; ksec.id="kk-"+u.key; ksec.dataset.pool=u.key;
-      ksec.innerHTML='<div class="ztop"><div class="ztitle">'+esc(u.name)+'</div><br><span class="zsub">🔥 Konkurencia · '+esc(u.compTagline||u.tagline)+'</span></div>'+kinner;
+      ksec.innerHTML='<div class="ztop"><div class="ztitle">'+esc(u.name)+'</div><br><span class="zsub">🔥 Konkurencia · '+esc(u.compTagline||u.tagline)+'</span></div><p class="research-note">Konkurenčné kampane v médiách: '+esc(data.competitorRange||data.verifiedRange)+'. Dátum článku nemusí byť dátum spustenia kampane.</p>'+kinner;
       khost.appendChild(ksec);
     }
   });
@@ -908,6 +978,7 @@ body,html{margin:0;padding:0;}
     layer.innerHTML = "";
     var sbg = document.getElementById("sectionbg"); if(sbg) sbg.innerHTML="";
     var vw = window.innerWidth;
+    if(vw <= 1100 || window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
     var wr = wrapEl.getBoundingClientRect();
     var bgTop = layer.getBoundingClientRect().top;
     function scatter(zone, gifs){
@@ -927,7 +998,7 @@ body,html{margin:0;padding:0;}
           else { x = (wr.right - over) + stag*(size*0.34); var rmax = vw - size*0.5; if(x > rmax) x = rmax; }
           var rot = ((k*37 + (side==="L"?0:19)) % 34) - 17;
           var img = document.createElement("img");
-          img.className="bgsticker"; img.src=g; img.alt=""; img.title="chyť a ťahaj ma! ✊";
+          img.className="bgsticker"; img.loading="lazy"; img.decoding="async"; img.src=g; img.alt=""; img.title="chyť a ťahaj ma! ✊";
           img.style.cssText = "left:"+Math.round(x)+"px;top:"+Math.round(y)+"px;width:"+size+"px;transform:rotate("+rot+"deg);";
           layer.appendChild(img);
         });
@@ -1020,6 +1091,7 @@ body,html{margin:0;padding:0;}
   function setOn(on){ playing=on; if(on){btn.classList.add("on"); btn.innerHTML='🔊 <span>HUDBA HRÁ</span>';} else {btn.classList.remove("on"); btn.innerHTML='🔇 <span>ZAPNI HUDBU</span>';} }
   function start(){ var p=audio.play(); if(p&&p.catch) p.catch(function(){}); setOn(true); }
   function stop(){ audio.pause(); setOn(false); }
+  window.addEventListener("newsletter:video", function(){stop();manualStop=true;});
   btn.addEventListener("click", function(){ if(playing){ stop(); manualStop=true; } else { start(); manualStop=false; } });
   window.addEventListener("load", function(){ try{ start(); }catch(e){} });
   ["pointerdown","keydown","touchstart","scroll","wheel"].forEach(function(ev){
@@ -1027,7 +1099,5 @@ body,html{margin:0;padding:0;}
   });
 })();
 </script>
-
+<script src="newsletter.js"></script>
 </body></html>
-
-</body></html></body></html>
