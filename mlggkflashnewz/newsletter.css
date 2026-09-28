@@ -84,3 +84,22 @@ html,body{min-height:100%;background:#10002b;}
 .gencover .gc-emoji{font-size:66px;opacity:.28;right:12px;top:25px;}
 .gencover .gc-brand{font-size:13px;right:40px;}.mediafallback{width:100%;height:100%;display:none;}
 .mediafallback .gc-title{font-size:18px;}.smedia .gencover{padding:24px;}.smedia .gc-title{font-size:clamp(22px,4vw,42px);max-width:85%;}.smedia .gc-brand{top:20px;left:24px;font-size:16px;}.smedia .gc-emoji{font-size:110px;}.smedia .gencover::after{left:24px;bottom:12px;}
+
+/* Additional editorial routes retain the newsletter's playful portal style. */
+.bb-awards{background:linear-gradient(125deg,#fff09c,#ffa544);transform:rotate(-.7deg);}
+.bb-insights{background:linear-gradient(125deg,#d6baff,#ff9de4);transform:rotate(-.8deg);}
+.bb-events{background:linear-gradient(125deg,#b2ffdf,#9ebeff);transform:rotate(.7deg);}
+.portal-symbol{display:grid;place-items:center;flex:none;width:76px;height:76px;font:70px/1 Georgia,serif;color:#1c123b;transform:rotate(8deg);}
+.insight-region{font-family:'Bungee',sans-serif;color:#ffe600;text-align:center;margin:36px 0 28px;font-size:25px;}
+.agency-angle{background:#edf8dd;color:#172c27;border-left:5px solid #34a773;padding:16px 18px;margin:18px 0;font:18px/1.5 'Comic Neue',sans-serif;}
+.agency-angle strong{font:12px/1.5 'Bungee',sans-serif;letter-spacing:1px;}.agency-angle p{margin:8px 0 0;}
+.event-list{display:grid;gap:22px;margin-top:28px;}
+.event-card{display:flex;gap:22px;background:#fff9ed;color:#201434;border:3px solid #14091e;border-radius:14px;padding:24px;box-shadow:5px 5px 0 #0007;}
+.event-date{flex:0 0 100px;font:25px/1.25 'Bungee',sans-serif;color:#532c91;}
+.event-kind{font:11px/1.5 'Bungee',sans-serif;letter-spacing:.5px;color:#63526c;}.event-body{min-width:0;}.event-body h3{font:26px/1.15 'Bungee',sans-serif;margin:10px 0;}.event-body p{font:18px/1.5 'Comic Neue',sans-serif;}
+.eventszone .sp-title,.insightszone .sp-title{font-size:clamp(28px,6vw,50px);overflow-wrap:anywhere;}
+@media(max-width:640px){.portal-symbol{width:54px;height:60px;font-size:54px;}.event-card{display:block;padding:18px;}.event-date{margin-bottom:12px;font-size:23px;}.event-body h3{font-size:23px;}.agency-angle{padding:13px;font-size:17px;}.insight-region{font-size:21px;}}
+
+.news-gif{height:100%;width:100%;position:relative;background:#f5f2f7;overflow:hidden;}
+.news-gif .cardmedia{object-fit:contain;}
+.news-gif>span{position:absolute;bottom:7px;right:7px;padding:5px 7px;border-radius:4px;background:#130d26dc;color:#fff;font:700 9px/1 Arial,sans-serif;letter-spacing:.8px;}
