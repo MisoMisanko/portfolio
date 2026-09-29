@@ -305,30 +305,31 @@ body,html{margin:0;padding:0;}
         <div class="special-ribbon"><span>✦ SPECIAL WEEK ✦</span><span class="special-edition">D&amp;AD 2026</span></div>
 <button class="bigbtn bb-awards" id="awards-entry" data-go="view-awards"><span class="bbtxt">ČO ZAŽIARILO NA D&amp;AD?<small>D&amp;AD 2026 REPORT · všetky ocenené práce</small></span><img class="portal-gif" src="assets/mobile/steal_03.gif" alt="" width="90" height="82"></button>
       </section>
-      <section class="home-group ads-group" aria-labelledby="ads-group-title"><h2 id="ads-group-title">REKLAMA NEWZ</h2><div class="home-pair">
-<button class="bigbtn bb-svet"  data-go="view-world"><span class="bbtxt">ČO NOVÉ VO SVETE<small>Kampane, ktoré sa oplatí vidieť</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-doma"  data-go="view-doma"><span class="bbtxt">ČO NOVÉ DOMA<small>Klienti, konkurencia &amp; social</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button>
-      </div></section>
-      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">NEWZ</h2><div class="home-pair">
-<button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">ČO HÝBE SVETOM<small>3 domáce + 3 svetové momenty</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">ČO SA CHYSTÁ?<small>Udalosti a námety na najbližší mesiac</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
-      </div></section>
-    </div>
+<div class="entry-pair"><button class="bigbtn bb-advertising" data-go="view-advertising"><span class="bbtxt">ČO NOVÉ V REKLAME</span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-news" data-go="view-news"><span class="bbtxt">ČO NOVÉ VO SVETE</span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button></div></div>
     <div class="homehint">MLGGK Flash Newz · tvoja pravidelná dávka inšpirácie</div>
   </div>
 
+<div class="view" id="view-advertising" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="homehub">      <section class="home-group ads-group" aria-labelledby="ads-group-title"><h2 id="ads-group-title">REKLAMA NEWZ</h2><div class="home-pair">
+<button class="bigbtn bb-svet"  data-go="view-world"><span class="bbtxt">ČO NOVÉ VO SVETE<small>Kampane, ktoré sa oplatí vidieť</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-doma"  data-go="view-doma"><span class="bbtxt">ČO NOVÉ DOMA<small>Klienti, konkurencia &amp; social</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button>
+      </div></section>
+</div></div><div class="view" id="view-news" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="homehub">      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">NEWZ</h2><div class="home-pair">
+<button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">ČO HÝBE SVETOM<small>Domáce a svetové aktuálne dianie</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">ČO SA CHYSTÁ?<small>Udalosti a námety na najbližší mesiac</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
+      </div></section>
+</div></div>
   <!-- ===== SVET (kampane) ===== -->
   <div class="view" id="view-world" hidden>
-    <button class="backbtn" data-back="view-home">← späť</button>
+    <button class="backbtn" data-back="view-advertising">← späť</button>
     <div class="secdiv"><span>🌍 ČO NOVÉ VO SVETE</span></div>
     <div id="specialhost"></div>
     <div class="foot"><div class="madeby">made by MM</div></div>
   </div>
 
 <div class="view" id="view-awards" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>🏆 SPECIAL WEEK</span></div><div id="awardshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
-<div class="view" id="view-insights" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>✳ ČO HÝBE SVETOM</span></div><div id="insightshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
-<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>▦ ČO SA CHYSTÁ?</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
+<div class="view" id="view-insights" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>✳ ČO HÝBE SVETOM</span></div><div id="insightshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
+<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>▦ ČO SA CHYSTÁ?</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
   <!-- ===== DOMA (výber unitu) ===== -->
   <div class="view" id="view-doma" hidden>
-    <button class="backbtn" data-back="view-home">← späť</button>
+    <button class="backbtn" data-back="view-advertising">← späť</button>
     <div class="chcemwrap"><div class="chcem chcem-sm">CHOOSE YOUR UNIT</div></div>
     <div class="pickline">klikni na svoj unit 👇</div>
     <div class="unitgrid">
@@ -384,7 +385,7 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
-<link rel="stylesheet" href="newsletter.css?v=20260929-dad-report">
+<link rel="stylesheet" href="newsletter.css?v=20260929-simple">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
@@ -407,7 +408,7 @@ body,html{margin:0;padding:0;}
         "brand": "Lidl",
         "emoji": "🎤",
         "headline": "Krímeš je späť. A tentoraz zbiera Lidl Body.",
-        "tldr": "Lidl a daren&curtis vytiahli Marcina s Krausom, pridali známy hudobný motív a z vysvetľovania vernostnej appky spravili popkultúrny comeback. <span class=\"hi\">Nostalgia najskôr, produkt hneď za ňou.</span> Stratégie priniesli zákulisie 21. septembra; samotná kampaň beží od 10. septembra.",
+        "tldr": "",
         "orig": "Slovensko · publikované 21. 9. 2026",
         "thumb": "assets/news-c84f2868be68.jpg",
         "yt": "EQs9cuE2pQQ",
@@ -425,7 +426,7 @@ body,html{margin:0;padding:0;}
         "brand": "Tatra banka",
         "emoji": "🤖",
         "headline": "Administratívu pustite z hlavy. Vizuál pustite cez AI.",
-        "tldr": "Echt brands a SORRYWECAN ukazujú podnikateľom, ako presunúť faktúry a doklady z hlavy do bankovej appky. <span class=\"hi\">Celá vizuálna časť vznikla pomocou AI</span>, ale so zámerne surovým filmovým vzhľadom. Kampaň beží od 15. septembra; čerstvý článok rozoberá jej produkciu.",
+        "tldr": "",
         "orig": "Slovensko · publikované 22. 9. 2026",
         "thumb": "assets/news-60ae2751831b.jpg",
         "yt": "thLx4hkoJL4",
@@ -441,7 +442,7 @@ body,html{margin:0;padding:0;}
         "brand": "Kooperativa",
         "emoji": "🇮🇹",
         "headline": "Škrabanec na aute? AutoMat, ragazzi!",
-        "tldr": "Dvaja Taliani sledujú turistov, ktorí si odrú auto o lampu. Slovenský vodič sa však nerozčúli: objavil pekný kostolík a má AutoMat. THIS IS LOCCO mení poistnú udalosť na malý dovolenkový príbeh. <span class=\"hi\">Benefit cez pokoj v hlave, nie cez strašenie.</span>",
+        "tldr": "",
         "orig": "Slovensko · publikované 23. 9. 2026",
         "thumb": "assets/news-d02d365c5908.jpg",
         "yt": "gy-MeTGCx7I",
@@ -460,7 +461,7 @@ body,html{margin:0;padding:0;}
         "emoji": "🏕️",
         "headline": "Seltos predáva výlet aj s blatom, dažďom a uleteným stanom.",
         "orig": "Európa · publikované 22. 9. 2026",
-        "tldr": "Európska kampaň <span class=\"hi\">Built for Real Life</span> od INNOCEAN Berlin sa vykašľala na dokonalé SUV dobrodružstvo. Film ukazuje štyri výlety, ktoré nejdú podľa plánu, do optimistickej skladby od A-ha. Konkurencia v kategórii áut; ide o európsku komunikáciu, nie o potvrdený slovenský launch.",
+        "tldr": "",
         "thumb": "assets/news-d926df4a24ef.jpg",
         "video": "https://marcommnews.com/wp-content/uploads/2026/09/Seltos_HEV_XLine_MY27_60s_Long-Film_16x9_FULLHD.mp4",
         "links": [
@@ -474,13 +475,13 @@ body,html{margin:0;padding:0;}
     ]
   },
   "social": {
-    "blurb": "Päť datovaných noviniek z 21.–27. septembra: slovenské UGC, nákup cez vizuálne vyhľadávanie, tvorba videí, AI v chate a dôveryhodnosť značiek. Pri nových funkciách vždy overte dostupnosť pre konkrétny účet.",
+    "blurb": "",
     "trends": [
       {
         "title": "UGCEED: UGC prestáva bývať v tabuľke",
         "platform": "UGC / Slovensko",
         "emoji": "📱",
-        "tldr": "TRIAD otvoril registrácie do beta verzie UGCEED. Platforma má spojiť značky s overenými tvorcami a riešiť brief, schvaľovanie, licenciu aj odmenu. Plné prepájanie je plánované na koniec jesene. Náš námet: pripraviť malý UGC pilot s jasnou licenciou a meraním, nie ďalší nekonečný chat.",
+        "tldr": "",
         "thumb": "assets/w40-ugceed.jpg",
         "links": [
           {
@@ -494,7 +495,7 @@ body,html{margin:0;padding:0;}
         "title": "Pinterest: inšpirácia dostáva nákupnú skratku",
         "platform": "Pinterest",
         "emoji": "🔎",
-        "tldr": "Digiday 21. septembra opísal Visual Search Ads: reklamy vo vizuálnom vyhľadávaní a detaile Pinu, zavádzané v beta verzii. Performance+ pridáva aj manuálne A/B testovanie. Náš námet: pri móde a bývaní ukázať produkt v kontexte a testovať detaily. Dostupnosť pre konkrétny účet treba overiť; nie je to potvrdený plošný slovenský rollout.",
+        "tldr": "",
         "thumb": "assets/news-fallbacks/news-07.gif",
         "links": [
           {
@@ -510,7 +511,7 @@ body,html{margin:0;padding:0;}
         "platform": "YouTube",
         "emoji": "▶",
         "yt": "kTKTa7h92CA",
-        "tldr": "Made on YouTube 23. septembra predstavilo testovanie až troch verzií videa v Studiu a nové možnosti organizovania Shorts do sérií. Náš námet: pripraviť tri odlišné úvody rovnakého spotu a porovnať ich, nie iba meniť headline. Ide o oznámené funkcie; dostupnosť v účte treba skontrolovať.",
+        "tldr": "",
         "links": [
           {
             "url": "https://blog.youtube/news-and-events/innovation-youtube-era-made-on-viewers-creators/",
@@ -524,7 +525,7 @@ body,html{margin:0;padding:0;}
         "title": "Snapchat: z vety v chate je pesnička",
         "platform": "Snapchat / Lens+",
         "emoji": "🎵",
-        "tldr": "Snap 21. septembra predstavil nové AI nástroje pre platený Lens+: zhudobnenie správy, úpravy fotiek aj remixovanie odpovedí a nálepiek. Náš námet: krátky zvukový formát môže fungovať ako osobná reakcia medzi kamarátmi. Nie je to dôkaz nového virálneho trendu ani potvrdenie plošnej dostupnosti na Slovensku.",
+        "tldr": "",
         "links": [
           {
             "url": "https://newsroom.snap.com/new-lens-plus-ai-features",
@@ -538,7 +539,7 @@ body,html{margin:0;padding:0;}
         "title": "LinkedIn: kto sa vlastne hlási k vašej značke?",
         "platform": "LinkedIn",
         "emoji": "✓",
-        "tldr": "LinkedIn 23. septembra oznámil nové overovacie funkcie. Overení správcovia stránok môžu riešiť profily, ktoré sa neoprávnene spájajú s firmou; pribúdajú aj testy ďalších signálov dôveryhodnosti. Náš námet: audit firemnej stránky a ľudí, ktorí ju reprezentujú. Je to hygiena značky, nie sľub vyššieho organického dosahu.",
+        "tldr": "",
         "links": [
           {
             "url": "https://news.linkedin.com/2026/linkedin-launches-new-verification-features-to-build-professional-trust",
@@ -555,14 +556,14 @@ body,html{margin:0;padding:0;}
     "festival": "",
     "takeaways": [],
     "title": "SVETOVÉ INŠPO TÝŽDŇA",
-    "blurb": "Šesť svetových kampaní v správach 21.–27. septembra. Nové uvedenia odlišujeme od ocenení starších prác. D&AD má tentoraz aj vlastný SPECIAL WEEK report.",
+    "blurb": "",
     "campaigns": [
       {
-        "name": "Kaviareň plná Kendall",
+        "name": "Beats 360",
         "brand": "Beats",
-        "agency": "Uncommon Creative Studio · správa 23. 9. 2026",
+        "agency": "Uncommon Creative Studio",
         "win": "",
-        "tldr": "Kendall Jenner hrá rôzne verzie samej seba v kaviarni. Variabilné slúchadlá Beats 360 tak dostávajú jednoduchú dramatizáciu personalizácie. Čo si odniesť: produktovú vlastnosť premeniť na pravidlo celého sveta spotu, nie iba na záverečný packshot.",
+        "tldr": "",
         "thumb": "assets/w40-yt-WiDpX3w-KJE.jpg",
         "links": [
           {
@@ -576,9 +577,9 @@ body,html{margin:0;padding:0;}
       {
         "name": "MOTOMORPHOSIS",
         "brand": "Lexus × MSCHF",
-        "agency": "MSCHF · USA · oznámené 22. 9. 2026",
+        "agency": "MSCHF",
         "win": "",
-        "tldr": "Lexus nechal dve elektrifikované autá premeniť na sochy: jedno stočené do kruhu, druhé do špirály. Výstava v New Yorku prebehla 24.–26. septembra. Inšpo pre značky: fyzický objekt, ktorý vyzerá nemožne, vie sám vytvoriť dôvod na fotenie a zdieľanie.",
+        "tldr": "",
         "thumb": "assets/news-fallbacks/news-03.gif",
         "links": [
           {
@@ -592,9 +593,9 @@ body,html{margin:0;padding:0;}
       {
         "name": "We’re Begging You",
         "brand": "Whoscall",
-        "agency": "Sour Bangkok · výber Bestads z 24. 9. 2026",
+        "agency": "Sour Bangkok",
         "win": "",
-        "tldr": "Keď ľudia zo strachu z podvodu nedvíhajú neznáme čísla, trpia aj legitímni volajúci. Whoscall postavil humor na ich prosbách o zdvihnutie telefónu. Bestads film vybral za TV prácu týždňa; nejde o overený dátum premiéry. Inšpo: ukázať problém očami vedľajšej postavy.",
+        "tldr": "",
         "thumb": "assets/w40-whoscall.jpg",
         "links": [
           {
@@ -607,8 +608,8 @@ body,html{margin:0;padding:0;}
       {
         "name": "Keep It Fresh",
         "brand": "Ello",
-        "agency": "Ceiling Train · oznámené 23. 9. 2026",
-        "tldr": "Dokonalá rodinná večera? Ello radšej ukazuje skutočný život: zvyšky jedla, snacky aj dobrodružstvá detí. Dózy a fľaše sú rekvizitou bežných momentov. Inšpo: produkt nemusí opravovať rodinu na ideál. Môže jej jednoducho pomáhať fungovať po svojom.",
+        "agency": "Ceiling Train",
+        "tldr": "",
         "win": "",
         "links": [
           {
@@ -623,8 +624,8 @@ body,html{margin:0;padding:0;}
       {
         "name": "Your Brand’s Best Friend",
         "brand": "Klaviyo",
-        "agency": "Gus · správa 25. 9. 2026",
-        "tldr": "D’Arcy Carden je kamarátka, ktorú by chcel mať každý marketér: rozumie zákazníkom a nenechá značku v štichu. Klaviyo personifikuje CRM cez vzťah s fiktívnou firmou BIGCOAT. Inšpo: aj zložitej B2B službe pomôže jasná postava a ľudská situácia. Humor nemusí skončiť pri logine do dashboardu.",
+        "agency": "Gus",
+        "tldr": "",
         "win": "",
         "links": [
           {
@@ -639,8 +640,8 @@ body,html{margin:0;padding:0;}
       {
         "name": "Back Her Game",
         "brand": "Dove × Kylie Kelce",
-        "agency": "USA · oznámené 23. 9. 2026",
-        "tldr": "Dove hľadá dievčenský športový tím, ktorý pošle na zápas ženského futbalového šampionátu 2027 do Brazílie. Tréneri v USA sa zapájajú videom na Instagrame alebo TikToku do 4. októbra. Inšpo: zo značkového presvedčenia spraviť konkrétnu odmenu a dôvod pre komunitu tvoriť obsah. Súťaž nie je slovenská aktivácia.",
+        "agency": "Agentúra v zdroji neuvedená",
+        "tldr": "",
         "win": "",
         "links": [
           {
@@ -8001,144 +8002,110 @@ body,html{margin:0;padding:0;}
   },
   "insights": {
     "title": "ČO HÝBE SVETOM",
-    "blurb": "3 slovenské + 3 svetové momenty. Overené dianie je oddelené od našich reklamných námetov. Bez politiky, s nápadom.",
+    "blurb": "",
     "items": [
       {
-        "title": "Veda vyšla medzi ľudí",
+        "title": "Slovenka Adéla zaujala New York Times",
         "region": "SLOVENSKO",
         "date": "25. 9. 2026",
-        "fact": "Európska noc vedy priniesla 20. ročník do piatich slovenských miest. Vedecké témy sa menili na stretnutia, ukážky a zážitky.",
-        "angle": "Pri náročnom produkte skúsiť malý verejný experiment alebo ukážku. Ľudia si môžu princíp vyskúšať, nie iba prečítať claim.",
         "links": [
           {
-            "url": "https://www.nocvedy.sk/",
-            "label": "Overený zdroj",
-            "style": ""
-          },
-          {
-            "label": "Termín · 25. 9. 2026",
-            "url": "https://mobil.citylife.sk/festival/europska-noc-vedy-bratislava",
+            "label": "Čítať zdroj ↗",
+            "url": "https://dennikn.sk/minuta/5584974/",
             "style": ""
           }
         ],
-        "thumb": "assets/topic-science-museum.jpg",
+        "thumb": "assets/current-adela.jpg",
         "imageCredit": {
-          "author": "Coredesat",
-          "license": "CC BY 3.0",
-          "url": "https://commons.wikimedia.org/wiki/File:Science_Museum_of_Virginia_20070916.jpg",
-          "article": "https://en.wikipedia.org/wiki/Science_museum",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+          "author": "Zdroj fotografie",
+          "url": "https://dennikn.sk/5545126/adela-sa-naucila-byt-popovou-hviezdou-album-prima-je-vsak-najsilnejsi-v-momentoch-ked-je-sama-sebou/",
+          "license": "",
+          "label": "Fotografia zo zdroja"
         }
       },
       {
-        "title": "Bratislava má klasiku v hlavnej úlohe",
+        "title": "Vlkolínec a tlak turizmu: slovenská obec v reportáži New York Times",
         "region": "SLOVENSKO",
-        "date": "23. 9. – 11. 10. 2026",
-        "fact": "Začal sa 61. ročník Bratislavských hudobných slávností. Festival prepája domácu scénu s medzinárodnými interpretmi.",
-        "angle": "Kultúrne dedičstvo podať cez ľudí, ktorí ho žijú dnes: krátke portréty, medzigeneračné dvojice či osobný výber skladby.",
+        "date": "25. 9. 2026",
         "links": [
           {
-            "url": "https://www.bhsfestival.sk/portfolio/ts-61-bhs-2026/",
-            "label": "Overený zdroj",
+            "label": "Čítať zdroj ↗",
+            "url": "https://dennikn.sk/minuta/5584974/",
             "style": ""
           }
         ],
-        "thumb": "assets/topic-orchestra.jpg",
+        "thumb": "assets/current-vlkolinec.jpg",
         "imageCredit": {
-          "author": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
-          "license": "CC BY-SA 3.0",
-          "url": "https://commons.wikimedia.org/wiki/File:National_Chamber_Orchestra_of_Armenia.jpg",
-          "article": "https://en.wikipedia.org/wiki/Orchestra",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+          "author": "Pilar from Catalunya",
+          "license": "CC BY-SA 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Vlkolinecslovakia001.jpg"
         }
       },
       {
-        "title": "Mesto na chvíľu inak než spoza volantu",
+        "title": "Fobia Kid vydal album Odpor!",
         "region": "SLOVENSKO",
         "date": "22. 9. 2026",
-        "fact": "Európsky týždeň mobility vyvrcholil Dňom bez áut. SAŽP na začiatku ročníka evidovala viac ako 40 zapojených samospráv. Témou bola mobilita pre všetkých.",
-        "angle": "Retail alebo zamestnávateľ môže ukázať skutočnú pohodlnú cestu pešo, MHD či bicyklom. Užitočná mapka býva lepšia než všeobecná zelená veta.",
         "links": [
           {
-            "url": "https://www.sazp.sk/novinky/udrzatelna-doprava-nie-je-luxus-ale-podmienka-pre-kvalitny-zivot-v-stredu-zacina-europsky-tyzden-mobility-2026",
-            "label": "Overený zdroj",
+            "label": "Čítať zdroj ↗",
+            "url": "https://dennikn.sk/minuta/5575879/",
             "style": ""
           }
         ],
-        "thumb": "assets/topic-bicycle.jpg",
+        "yt": "MY-n6T2JKcs",
+        "thumb": "assets/current-fobia.jpg"
+      },
+      {
+        "title": "Beck sa vracia s albumom Ride Lonesome",
+        "region": "SVET",
+        "date": "25. 9. 2026",
+        "links": [
+          {
+            "label": "Čítať zdroj ↗",
+            "url": "https://dennikn.sk/5578782/trvalo-mu-dlho-kym-nasiel-odvahu-byt-priamy-a-zaroven-citlivy-beck-vydal-dalsie-podmanive-piesne-o-bolesti/",
+            "style": ""
+          }
+        ],
+        "thumb": "assets/current-beck.jpg",
         "imageCredit": {
-          "author": "齐健 from Peking, People's Republic of China",
-          "license": "CC BY 2.0",
-          "url": "https://commons.wikimedia.org/wiki/File:Left_side_of_Flying_Pigeon.jpg",
-          "article": "https://en.wikipedia.org/wiki/Bicycle",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+          "author": "Zdroj fotografie",
+          "url": "https://dennikn.sk/5578782/trvalo-mu-dlho-kym-nasiel-odvahu-byt-priamy-a-zaroven-citlivy-beck-vydal-dalsie-podmanive-piesne-o-bolesti/",
+          "license": "",
+          "label": "Fotografia zo zdroja"
         }
       },
       {
-        "title": "Miláno ukazuje budúcu jar",
+        "title": "Spotify prepája počúvanie s AI asistentom Muse",
         "region": "SVET",
-        "date": "22.–28. 9. 2026",
-        "fact": "Milano Fashion Week predstavuje dámske kolekcie na jar a leto 2027. Oficiálny kalendár zahŕňa prehliadky aj prezentácie.",
-        "angle": "Pre retail vytvoriť vlastný výber konkrétnych farieb, materiálov alebo stylingov z overených prehliadok. Toto je rešeršný námet, nie tvrdenie o jednom univerzálnom trende.",
+        "date": "23. 9. 2026",
         "links": [
           {
-            "url": "https://milanofashionweek.cameramoda.it/en/calendar",
-            "label": "Overený zdroj",
+            "label": "Čítať zdroj ↗",
+            "url": "https://newsroom.spotify.com/2026-09-23/spotify-meta-muse-agent/",
             "style": ""
           }
         ],
-        "thumb": "assets/topic-milan-fashion-week.jpg",
+        "thumb": "assets/current-spotify.jpg",
         "imageCredit": {
-          "author": "Jvpr1",
-          "license": "CC BY-SA 3.0",
-          "url": "https://commons.wikimedia.org/wiki/File:John_Varvatos_Fall_2010_04.JPG",
-          "article": "https://en.wikipedia.org/wiki/Milan_Fashion_Week",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+          "author": "Zdroj fotografie",
+          "url": "https://newsroom.spotify.com/2026-09-23/spotify-meta-muse-agent/",
+          "license": "",
+          "label": "Fotografia zo zdroja"
         }
       },
       {
-        "title": "Oktoberfest: spoločný stôl je stále formát",
+        "title": "U2 vydali Silencio z pripravovaného albumu Carnaval da Luz",
         "region": "SVET",
-        "date": "19. 9. – 4. 10. 2026",
-        "fact": "V Mníchove prebieha Oktoberfest. Okrem nápojov má vlastný svet jedla, tradícií a spoločného zážitku.",
-        "angle": "Pre gastro funguje lokálna verzia spoločného stola či ochutnávky. Myslieť aj na nealkoholické možnosti a jasný dôvod, prečo prísť spolu.",
+        "date": "25. 9. 2026",
         "links": [
           {
-            "url": "https://www.oktoberfest.de/en/information/service-for-visitors/faqs-for-wiesn-visitors",
-            "label": "Overený zdroj",
+            "label": "Čítať zdroj ↗",
+            "url": "https://dennikn.sk/minuta/5583418/",
             "style": ""
           }
         ],
-        "thumb": "assets/topic-oktoberfest.jpg",
-        "imageCredit": {
-          "author": "Heribert Pohl --- Thanks for half  a million clicks! from Germering bei München, Bayern",
-          "license": "CC BY-SA 2.0",
-          "url": "https://commons.wikimedia.org/wiki/File:O%27zapft_is!_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is!_Munich_5_season,_the_Oktoberfest_has_begun_(9855483374).jpg",
-          "article": "https://en.wikipedia.org/wiki/Oktoberfest",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
-        }
-      },
-      {
-        "title": "Cestovanie si hľadá cestu cez AI",
-        "region": "SVET",
-        "date": "27. 9. 2026",
-        "fact": "Svetový deň cestovného ruchu otvoril aj tému umelej inteligencie a digitálnej premeny cestovania. Technológie ovplyvňujú objavovanie destinácií.",
-        "angle": "Destinácia či hotel môže pripraviť konkrétne lokálne itineráre, zrozumiteľné informácie a vlastné aktuálne fotografie. Menej slov „nezabudnuteľný“, viac odpovedí na reálne otázky.",
-        "links": [
-          {
-            "url": "https://indonesia.un.org/en/322925-world-tourism-day-2026-secretary-generals-message-ant%C3%B3nio-guterres",
-            "label": "Overený zdroj",
-            "style": ""
-          }
-        ],
-        "thumb": "assets/topic-tourism.jpg",
-        "imageCredit": {
-          "author": "Terabass",
-          "license": "CC BY-SA 3.0",
-          "url": "https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg",
-          "article": "https://en.wikipedia.org/wiki/Tourism",
-          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
-        }
+        "yt": "1mCN-RDh0-0",
+        "thumb": "assets/current-u2.jpg"
       }
     ]
   },
@@ -8146,7 +8113,7 @@ body,html{margin:0;padding:0;}
     "title": "ČO SA CHYSTÁ?",
     "fromDate": "2026-09-28",
     "toDate": "2026-10-28",
-    "blurb": "Kalendár námetov na 28. september – 28. október. Tematický deň automaticky neznamená štátny sviatok ani deň pracovného pokoja.",
+    "blurb": "28. 9. – 28. 10. 2026",
     "items": [
       {
         "date": "2026-10-01",
@@ -8154,7 +8121,7 @@ body,html{margin:0;padding:0;}
         "title": "Medzinárodný deň kávy",
         "place": "Svet / Slovensko",
         "kind": "TEMATICKÝ DEŇ",
-        "angle": "Ranný rituál, príbeh baristu alebo ochutnávka. Zvoliť konkrétnu kávovú situáciu namiesto ďalšej fotky hrnčeka.",
+        "angle": "",
         "links": [
           {
             "url": "https://ico.org/documents/cy2019-20/pr-308e-international-coffee-day.pdf",
@@ -8177,7 +8144,7 @@ body,html{margin:0;padding:0;}
         "title": "Medzinárodný deň starších osôb",
         "place": "Svet / Slovensko",
         "kind": "TEMATICKÝ DEŇ",
-        "angle": "Ukázať aktívnych ľudí a ich skutočné potreby bez infantilizovania. Praktická služba alebo medzigeneračný formát.",
+        "angle": "",
         "links": [
           {
             "url": "https://www.un.org/en/observances/older-persons-day",
@@ -8200,7 +8167,7 @@ body,html{margin:0;padding:0;}
         "title": "Biela noc — Bratislava",
         "place": "Bratislava",
         "kind": "KULTÚRA",
-        "angle": "Nočná prechádzka a umenie v meste: užitočná mapa trasy, zastávka na jedlo či vizuálny denník. Bez predstierania partnerstva.",
+        "angle": "",
         "links": [
           {
             "url": "https://bielanoc.sk/",
@@ -8223,7 +8190,7 @@ body,html{margin:0;padding:0;}
         "title": "Medzinárodný maratón mieru",
         "place": "Košice",
         "kind": "ŠPORT",
-        "angle": "Obsah aj pre fanúšikov pri trati: povzbudzovanie, lokálne príbehy bežcov a servis pre návštevníkov.",
+        "angle": "",
         "links": [
           {
             "url": "https://www.kosicemarathon.com/pre-bezcov-i-divakov/",
@@ -8246,7 +8213,7 @@ body,html{margin:0;padding:0;}
         "title": "Svetový deň učiteľov",
         "place": "Svet / Slovensko",
         "kind": "TEMATICKÝ DEŇ",
-        "angle": "Poďakovanie cez konkrétnu vec, ktorú nás niekto naučil. Tento svetový dátum je odlišný od slovenského Dňa učiteľov v marci.",
+        "angle": "",
         "links": [
           {
             "url": "https://www.unesco.org/en/days/teachers?hub=66657",
@@ -8269,7 +8236,7 @@ body,html{margin:0;padding:0;}
         "title": "Biela noc — Košice",
         "place": "Košice",
         "kind": "KULTÚRA",
-        "angle": "Druhé mesto, vlastná trasa a miestni tvorcovia. Obsah prispôsobiť košickému programu, nekopírovať bratislavský post.",
+        "angle": "",
         "links": [
           {
             "url": "https://bielanoc.sk/",
@@ -8292,7 +8259,7 @@ body,html{margin:0;padding:0;}
         "title": "Svetový deň duševného zdravia",
         "place": "Svet / Slovensko",
         "kind": "TEMATICKÝ DEŇ",
-        "angle": "Citlivá téma potrebuje reálnu pomoc a kvalifikovaný zdroj. Vyhnúť sa prázdnemu „daj si pauzu“ aj produktovým sľubom o liečbe.",
+        "angle": "",
         "links": [
           {
             "url": "https://www.who.int/campaigns/world-mental-health-day/2026",
@@ -8315,7 +8282,7 @@ body,html{margin:0;padding:0;}
         "title": "Svetový deň výživy",
         "place": "Svet / Slovensko",
         "kind": "TEMATICKÝ DEŇ",
-        "angle": "Jedlo bez plytvania: recept zo zvyškov, lokálny dodávateľ alebo jednoduchý plán nákupu. Tvrdenia o výžive overiť.",
+        "angle": "",
         "links": [
           {
             "url": "https://www.fao.org/world-food-day/en/",
@@ -8450,8 +8417,8 @@ body,html{margin:0;padding:0;}
       var cposter='<div class="gencover gc-steal"><div class="gc-brand">'+esc(c.brand||'')+'</div><div class="gc-emoji">💎</div><div class="gc-title">'+esc(c.name||'')+'</div></div>';
       var media=mediaHTML(c,cposter);
       return '<div class="scard"><div class="smedia">'+media+'</div>'+
-        '<span class="stag">'+esc(c.brand||"INŠPO")+'</span><div class="sname">'+esc(c.name)+win+'</div>'+
-        (c.agency?'<div class="smeta">'+esc(c.agency)+'</div>':'')+'<div class="stldr">'+esc(c.tldr)+'</div>'+links+'</div>';
+        '<div class="sname">'+esc(c.name)+win+'</div>'+
+        (c.agency?'<div class="smeta">'+esc(c.agency)+'</div>':'')+links+'</div>';
     }).join('');
     var sec=document.createElement("section"); sec.className="specialzone"; sec.id=hostId ? "awards-report" : "special"; sec.dataset.pool="steal";
     sec.innerHTML='<div class="sp-top">'+(kick?'<div class="sp-kick">'+kick+'</div>':'')+'<div class="sp-title">'+heading+'</div>'+
@@ -8490,14 +8457,14 @@ body,html{margin:0;padding:0;}
   function sourceLinks(item){return (item.links||[]).map(function(l){return '<a class="btn" href="'+attr(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';}).join('');}
   function photoCredit(c){
     if(!c.imageCredit)return '';
-    return '<div class="photo-credit">Tematická fotografia · <a href="'+attr(c.imageCredit.url)+'" target="_blank" rel="noopener">'+esc(c.imageCredit.author)+' / '+esc(c.imageCredit.license)+'</a></div>';
+    return '<div class="photo-credit">'+esc(c.imageCredit.label||'Tematická fotografia')+' · <a href="'+attr(c.imageCredit.url)+'" target="_blank" rel="noopener">'+esc(c.imageCredit.author)+(c.imageCredit.license?' / '+esc(c.imageCredit.license):'')+'</a></div>';
   }
   function renderInsights(){
     var section=data.insights;if(!section)return;
     var groups=['SLOVENSKO','SVET'].map(function(region){
-      return '<h3 class="insight-region">'+(region==='SLOVENSKO'?'DOMA / 3 MOMENTY':'VO SVETE / 3 MOMENTY')+'</h3>'+(section.items||[]).filter(function(c){return c.region===region;}).map(function(c){
+      return '<h3 class="insight-region">'+(region==='SLOVENSKO'?'DOMA':'VO SVETE')+'</h3>'+(section.items||[]).filter(function(c){return c.region===region;}).map(function(c){
         var fallback='<div class="gencover"><div class="gc-title">'+esc(c.title)+'</div></div>';
-        return '<article class="scard"><div class="smedia">'+mediaHTML(c,fallback)+'</div>'+photoCredit(c)+'<span class="stag">'+esc(c.region)+'</span><div class="smeta">'+esc(c.date)+'</div><h3 class="sname">'+esc(c.title)+'</h3><p class="stldr">'+esc(c.fact)+'</p><div class="agency-angle"><strong>NÁŠ REKLAMNÝ NÁMET</strong><p>'+esc(c.angle)+'</p></div>'+sourceLinks(c)+'</article>';
+        return '<article class="scard"><div class="smedia">'+mediaHTML(c,fallback)+'</div>'+photoCredit(c)+'<span class="stag">'+esc(c.region)+'</span><div class="smeta">'+esc(c.date)+'</div><h3 class="sname">'+esc(c.title)+'</h3>'+sourceLinks(c)+'</article>';
       }).join('');
     }).join('');
     document.getElementById('insightshost').innerHTML='<section class="specialzone insightszone" data-pool="social"><div class="sp-top"><div class="sp-title">'+esc(section.title)+'</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div>'+groups+'</section>';
@@ -8505,7 +8472,7 @@ body,html{margin:0;padding:0;}
   function renderEvents(){
     var section=data.events;if(!section)return;
     function dateLabel(v){var a=v.split('-');return Number(a[2])+'. '+Number(a[1])+'.';}
-    var cards=(section.items||[]).map(function(c){return '<article class="event-card"><div class="event-photo">'+mediaHTML(c,'')+'</div>'+photoCredit(c)+'<div class="event-content"><div class="event-date">'+dateLabel(c.date)+(c.end?' – '+dateLabel(c.end):'')+'</div><div class="event-body"><div class="event-kind">'+esc(c.kind)+' / '+esc(c.place)+'</div><h3>'+esc(c.title)+'</h3><p>'+esc(c.angle)+'</p>'+sourceLinks(c)+'</div></div></article>';}).join('');
+    var cards=(section.items||[]).map(function(c){return '<article class="event-card"><div class="event-photo">'+mediaHTML(c,'')+'</div>'+photoCredit(c)+'<div class="event-content"><div class="event-date">'+dateLabel(c.date)+(c.end?' – '+dateLabel(c.end):'')+'</div><div class="event-body"><div class="event-kind">'+esc(c.kind)+' / '+esc(c.place)+'</div><h3>'+esc(c.title)+'</h3>'+sourceLinks(c)+'</div></div></article>';}).join('');
     document.getElementById('eventshost').innerHTML='<section class="specialzone eventszone" data-pool="yellow"><div class="sp-top"><div class="sp-title">ČO SA CHYSTÁ?</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div><div class="event-list">'+cards+'</div></section>';
   }
   renderInsights();renderEvents();
@@ -8522,7 +8489,7 @@ body,html{margin:0;padding:0;}
       var media=mediaHTML(t,tposter);
       return '<div class="scard"><div class="smedia">'+media+'</div>'+
         '<span class="stag">'+esc(t.emoji||'📱')+'</span><div class="sname">'+esc(t.title)+plat+'</div>'+
-        '<div class="stldr">'+esc(t.tldr||'')+'</div>'+links+'</div>';
+        links+'</div>';
     }).join('');
     if(!cards){ cards='<div class="emptyunit"><span class="big">📱</span>Tento týždeň sme trendy ešte nestihli — research beží každý pondelok.</div>'; }
     var sec=document.createElement("section"); sec.className="specialzone socialzone"; sec.id="social-sec"; sec.dataset.pool="social";
@@ -8542,7 +8509,7 @@ body,html{margin:0;padding:0;}
         '<span class="tag" style="background:'+unit.tag+'">'+esc(it.brand||'KONKURENCIA')+'</span>'+
         '<div class="head"><span class="emoji">'+(it.emoji||'📣')+'</span> '+esc(it.headline)+'</div>'+
         (it.orig?'<div class="orig">'+esc(it.orig)+'</div>':'')+
-        '<div class="tldr">'+(it.tldr||'')+'</div>'+ links +
+        links +
       '</div>'+
       '<div class="media"><div class="thumbframe">'+ mediaHTML(it,poster) +'</div></div>'+
     '</div>';
@@ -8712,5 +8679,5 @@ body,html{margin:0;padding:0;}
 </script>
 
 
-<script src="newsletter.js?v=20260929-dad-report"></script>
+<script src="newsletter.js?v=20260929-simple"></script>
 </body></html>
