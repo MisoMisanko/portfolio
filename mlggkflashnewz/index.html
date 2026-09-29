@@ -300,12 +300,17 @@ body,html{margin:0;padding:0;}
     </div>
     <div class="chcemwrap"><div class="chcem">ČO NOVÉ?</div></div>
     <div class="pickline">klikni a vyber si 👇</div>
-    <div class="homegrid">
-      <button class="bigbtn bb-awards" id="awards-entry" data-stamp="SPECIAL WEEK / D&amp;AD" data-go="view-awards" hidden><span class="bbtxt">SPECIAL WEEK<small>D&amp;AD 2026 · víťazi, filmy &amp; kreatívne lekcie</small></span><span class="portal-symbol" aria-hidden="true">✦</span></button>
-      <button class="bigbtn bb-svet" data-stamp="01 / SVETOVÉ INŠPO" data-go="view-world"><span class="bbico">🌍</span><span class="bbtxt">ČO NOVÉ VO SVETE<small>najlepšie kampane pre inšpiráciu</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button>
-      <button class="bigbtn bb-doma" data-stamp="02 / DOMÁCI PREHĽAD" data-go="view-doma"><span class="bbico">🏠</span><span class="bbtxt">ČO NOVÉ DOMA<small>klienti, konkurencia &amp; social — po unitoch</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button>
-      <button class="bigbtn bb-insights" data-stamp="03 / KULTÚRA &amp; ŽIVOT" data-go="view-insights"><span class="bbtxt">ČO HÝBE SVETOM<small>3 domáce + 3 svetové momenty pre dobrý nápad</small></span><span class="portal-symbol" aria-hidden="true">✳</span></button>
-      <button class="bigbtn bb-events" data-stamp="04 / NAJBLIŽŠÍ MESIAC" data-go="view-events"><span class="bbtxt">UPCOMING EVENTS<small>čo sa blíži &amp; ako to využiť v reklame</small></span><span class="portal-symbol" aria-hidden="true">▦</span></button>
+    <div class="homehub">
+      <section class="special-portal" id="special-entry-wrap" aria-label="Special week" hidden>
+        <div class="special-ribbon"><span>✦ SPECIAL WEEK ✦</span><span class="special-edition">D&amp;AD 2026</span></div>
+<button class="bigbtn bb-awards" id="awards-entry" data-go="view-awards"><span class="bbtxt">ČO ZAŽIARILO NA D&amp;AD?<small>Víťazi, filmy &amp; kreatívne lekcie</small></span><img class="portal-gif" src="assets/mobile/steal_03.gif" alt="" width="90" height="82"></button>
+      </section>
+      <section class="home-group ads-group" aria-labelledby="ads-group-title"><h2 id="ads-group-title">REKLAMA NEWZ</h2><div class="home-pair">
+<button class="bigbtn bb-svet"  data-go="view-world"><span class="bbtxt">ČO NOVÉ VO SVETE<small>Kampane, ktoré sa oplatí vidieť</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-doma"  data-go="view-doma"><span class="bbtxt">ČO NOVÉ DOMA<small>Klienti, konkurencia &amp; social</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button>
+      </div></section>
+      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">NEWZ</h2><div class="home-pair">
+<button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">ČO HÝBE SVETOM<small>3 domáce + 3 svetové momenty</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">ČO SA CHYSTÁ?<small>Udalosti a námety na najbližší mesiac</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
+      </div></section>
     </div>
     <div class="homehint">MLGGK Flash Newz · tvoja pravidelná dávka inšpirácie</div>
   </div>
@@ -320,7 +325,7 @@ body,html{margin:0;padding:0;}
 
 <div class="view" id="view-awards" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>🏆 SPECIAL WEEK</span></div><div id="awardshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
 <div class="view" id="view-insights" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>✳ ČO HÝBE SVETOM</span></div><div id="insightshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
-<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>▦ UPCOMING EVENTS</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
+<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>▦ ČO SA CHYSTÁ?</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
   <!-- ===== DOMA (výber unitu) ===== -->
   <div class="view" id="view-doma" hidden>
     <button class="backbtn" data-back="view-home">← späť</button>
@@ -379,7 +384,7 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
-<link rel="stylesheet" href="newsletter.css?v=20260924-covers6">
+<link rel="stylesheet" href="newsletter.css?v=20260928-hub">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
@@ -876,8 +881,14 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-02.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-science-museum.jpg",
+        "imageCredit": {
+          "author": "Coredesat",
+          "license": "CC BY 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Science_Museum_of_Virginia_20070916.jpg",
+          "article": "https://en.wikipedia.org/wiki/Science_museum",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "title": "Bratislava má klasiku v hlavnej úlohe",
@@ -892,8 +903,14 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-05.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-orchestra.jpg",
+        "imageCredit": {
+          "author": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:National_Chamber_Orchestra_of_Armenia.jpg",
+          "article": "https://en.wikipedia.org/wiki/Orchestra",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "title": "Mesto na chvíľu inak než spoza volantu",
@@ -908,8 +925,14 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-06.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-bicycle.jpg",
+        "imageCredit": {
+          "author": "齐健 from Peking, People's Republic of China",
+          "license": "CC BY 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Left_side_of_Flying_Pigeon.jpg",
+          "article": "https://en.wikipedia.org/wiki/Bicycle",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "title": "Miláno ukazuje budúcu jar",
@@ -924,8 +947,14 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-05.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-milan-fashion-week.jpg",
+        "imageCredit": {
+          "author": "Jvpr1",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:John_Varvatos_Fall_2010_04.JPG",
+          "article": "https://en.wikipedia.org/wiki/Milan_Fashion_Week",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "title": "Oktoberfest: spoločný stôl je stále formát",
@@ -940,8 +969,14 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-04.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-oktoberfest.jpg",
+        "imageCredit": {
+          "author": "Heribert Pohl --- Thanks for half  a million clicks! from Germering bei München, Bayern",
+          "license": "CC BY-SA 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:O%27zapft_is!_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is!_Munich_5_season,_the_Oktoberfest_has_begun_(9855483374).jpg",
+          "article": "https://en.wikipedia.org/wiki/Oktoberfest",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "title": "Cestovanie si hľadá cestu cez AI",
@@ -956,13 +991,19 @@ body,html{margin:0;padding:0;}
             "style": ""
           }
         ],
-        "thumb": "assets/news-fallbacks/news-07.gif",
-        "illustrativeGif": true
+        "thumb": "assets/topic-tourism.jpg",
+        "imageCredit": {
+          "author": "Terabass",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:New_york_times_square-terabass.jpg",
+          "article": "https://en.wikipedia.org/wiki/Tourism",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       }
     ]
   },
   "events": {
-    "title": "UPCOMING EVENTS",
+    "title": "ČO SA CHYSTÁ?",
     "fromDate": "2026-09-28",
     "toDate": "2026-10-28",
     "blurb": "Kalendár námetov na 28. september – 28. október. Tematický deň automaticky neznamená štátny sviatok ani deň pracovného pokoja.",
@@ -980,7 +1021,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-coffee.jpg",
+        "imageCredit": {
+          "author": "Bex Walton",
+          "license": "CC BY 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Latte_and_dark_coffee.jpg",
+          "article": "https://en.wikipedia.org/wiki/Coffee",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-01",
@@ -995,7 +1044,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-old-age.jpg",
+        "imageCredit": {
+          "author": "Diego Grez",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:My_Grandfather_Photo_from_January_17.JPG",
+          "article": "https://en.wikipedia.org/wiki/Old_age",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-02",
@@ -1010,7 +1067,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-festival-of-lights-berlin.jpg",
+        "imageCredit": {
+          "author": "Matthias Trautsch",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Berliner_Dom_Festival_of_Lights.jpg",
+          "article": "https://en.wikipedia.org/wiki/Festival_of_Lights_(Berlin)",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-04",
@@ -1025,7 +1090,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-marathon.jpg",
+        "imageCredit": {
+          "author": "Bratislavská župa from Bratislava, Slovakia",
+          "license": "CC BY 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:BSK_CSOB_MARATON046_(33791445325).jpg",
+          "article": "https://en.wikipedia.org/wiki/Marathon",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-05",
@@ -1040,7 +1113,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-teacher.jpg",
+        "imageCredit": {
+          "author": "Harrison Keely",
+          "license": "CC BY 4.0",
+          "url": "https://commons.wikimedia.org/wiki/File:A_public_high_school_teacher_in_a_classroom_in_the_United_States_08.jpg",
+          "article": "https://en.wikipedia.org/wiki/Teacher",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-09",
@@ -1055,7 +1136,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-festival-of-lights-berlin.jpg",
+        "imageCredit": {
+          "author": "Matthias Trautsch",
+          "license": "CC BY-SA 3.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Berliner_Dom_Festival_of_Lights.jpg",
+          "article": "https://en.wikipedia.org/wiki/Festival_of_Lights_(Berlin)",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       },
       {
         "date": "2026-10-10",
@@ -1070,7 +1159,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-forest.jpg",
+        "imageCredit": {
+          "author": "lubasi",
+          "license": "CC BY-SA 2.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Amazon_Rainforest.jpg",
+          "article": "https://en.wikipedia.org/wiki/Forest",
+          "caption": "Tematická fotografia prírody; nie záznam z podujatia."
+        }
       },
       {
         "date": "2026-10-16",
@@ -1085,7 +1182,15 @@ body,html{margin:0;padding:0;}
             "label": "Dátum a informácie",
             "style": ""
           }
-        ]
+        ],
+        "thumb": "assets/topic-food.jpg",
+        "imageCredit": {
+          "author": "Unknown author Unknown author",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Good_Food_Display_-_NCI_Visuals_Online.jpg",
+          "article": "https://en.wikipedia.org/wiki/Food",
+          "caption": "Tematická fotografia; nie záber z aktuálneho podujatia."
+        }
       }
     ]
   },
@@ -1213,18 +1318,23 @@ body,html{margin:0;padding:0;}
   }
   renderSpecial();
   if(data.awards && data.awards.active){
-    document.getElementById('awards-entry').hidden=false;
+    document.getElementById('special-entry-wrap').hidden=false;
     document.querySelector('#awards-entry small').textContent=data.awards.festival+' · víťazi, filmy & kreatívne lekcie';
-    document.getElementById('awards-entry').dataset.stamp='SPECIAL WEEK / '+data.awards.festival;
+    document.querySelector('.special-edition').textContent=data.awards.festival;
+    document.querySelector('#awards-entry .bbtxt').firstChild.textContent='ČO ZAŽIARILO NA '+data.awards.festival.replace(/\s+20\d{2}/,'')+'?';
     renderSpecial(data.awards,'awardshost');
   }
   function sourceLinks(item){return (item.links||[]).map(function(l){return '<a class="btn" href="'+attr(l.url)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';}).join('');}
+  function photoCredit(c){
+    if(!c.imageCredit)return '';
+    return '<div class="photo-credit">Tematická fotografia · <a href="'+attr(c.imageCredit.url)+'" target="_blank" rel="noopener">'+esc(c.imageCredit.author)+' / '+esc(c.imageCredit.license)+'</a></div>';
+  }
   function renderInsights(){
     var section=data.insights;if(!section)return;
     var groups=['SLOVENSKO','SVET'].map(function(region){
       return '<h3 class="insight-region">'+(region==='SLOVENSKO'?'DOMA / 3 MOMENTY':'VO SVETE / 3 MOMENTY')+'</h3>'+(section.items||[]).filter(function(c){return c.region===region;}).map(function(c){
         var fallback='<div class="gencover"><div class="gc-title">'+esc(c.title)+'</div></div>';
-        return '<article class="scard"><div class="smedia">'+mediaHTML(c,fallback)+'</div><span class="stag">'+esc(c.region)+'</span><div class="smeta">'+esc(c.date)+'</div><h3 class="sname">'+esc(c.title)+'</h3><p class="stldr">'+esc(c.fact)+'</p><div class="agency-angle"><strong>NÁŠ REKLAMNÝ NÁMET</strong><p>'+esc(c.angle)+'</p></div>'+sourceLinks(c)+'</article>';
+        return '<article class="scard"><div class="smedia">'+mediaHTML(c,fallback)+'</div>'+photoCredit(c)+'<span class="stag">'+esc(c.region)+'</span><div class="smeta">'+esc(c.date)+'</div><h3 class="sname">'+esc(c.title)+'</h3><p class="stldr">'+esc(c.fact)+'</p><div class="agency-angle"><strong>NÁŠ REKLAMNÝ NÁMET</strong><p>'+esc(c.angle)+'</p></div>'+sourceLinks(c)+'</article>';
       }).join('');
     }).join('');
     document.getElementById('insightshost').innerHTML='<section class="specialzone insightszone" data-pool="social"><div class="sp-top"><div class="sp-title">'+esc(section.title)+'</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div>'+groups+'</section>';
@@ -1232,8 +1342,8 @@ body,html{margin:0;padding:0;}
   function renderEvents(){
     var section=data.events;if(!section)return;
     function dateLabel(v){var a=v.split('-');return Number(a[2])+'. '+Number(a[1])+'.';}
-    var cards=(section.items||[]).map(function(c){return '<article class="event-card"><div class="event-date">'+dateLabel(c.date)+(c.end?' – '+dateLabel(c.end):'')+'</div><div class="event-body"><div class="event-kind">'+esc(c.kind)+' / '+esc(c.place)+'</div><h3>'+esc(c.title)+'</h3><p>'+esc(c.angle)+'</p>'+sourceLinks(c)+'</div></article>';}).join('');
-    document.getElementById('eventshost').innerHTML='<section class="specialzone eventszone" data-pool="yellow"><div class="sp-top"><div class="sp-title">UPCOMING EVENTS</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div><div class="event-list">'+cards+'</div></section>';
+    var cards=(section.items||[]).map(function(c){return '<article class="event-card"><div class="event-photo">'+mediaHTML(c,'')+'</div>'+photoCredit(c)+'<div class="event-content"><div class="event-date">'+dateLabel(c.date)+(c.end?' – '+dateLabel(c.end):'')+'</div><div class="event-body"><div class="event-kind">'+esc(c.kind)+' / '+esc(c.place)+'</div><h3>'+esc(c.title)+'</h3><p>'+esc(c.angle)+'</p>'+sourceLinks(c)+'</div></div></article>';}).join('');
+    document.getElementById('eventshost').innerHTML='<section class="specialzone eventszone" data-pool="yellow"><div class="sp-top"><div class="sp-title">ČO SA CHYSTÁ?</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div><div class="event-list">'+cards+'</div></section>';
   }
   renderInsights();renderEvents();
 
@@ -1438,5 +1548,5 @@ body,html{margin:0;padding:0;}
 </script>
 
 
-<script src="newsletter.js?v=20260924-covers6"></script>
+<script src="newsletter.js?v=20260928-hub"></script>
 </body></html>

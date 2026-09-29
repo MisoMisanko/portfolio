@@ -5,16 +5,22 @@
   // A shuffled cycle gives every visitor the same picks for a Bratislava week.
   var localDate=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bratislava',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   var week=Math.floor((Date.parse(localDate+'T00:00:00Z')-Date.UTC(2026,0,5))/604800000);
+  var portalPicks=[];
   function weeklyPortal(selector,pools,seed){
     var choices=pools.reduce(function(all,pool){return all.concat(bank.unitGifs[pool]||[]);},[]);
     for(var i=choices.length-1;i>0;i--){seed=(Math.imul(seed,1664525)+1013904223)>>>0;var j=seed%(i+1),swap=choices[i];choices[i]=choices[j];choices[j]=swap;}
+    choices=choices.filter(function(src){return portalPicks.indexOf(src)===-1;});
     var img=document.querySelector(selector);if(!img||!choices.length)return;
     var src=choices[((week%choices.length)+choices.length)%choices.length];
+    portalPicks.push(src);
     img.onerror=function(){this.onerror=null;this.src=src;};
     img.src=src.replace('assets/','assets/mobile/');
   }
   weeklyPortal('.bb-svet .portal-gif',['steal'],91827);
   weeklyPortal('.bb-doma .portal-gif',['yellow','cyan','blue','social'],41359);
+  weeklyPortal('.bb-awards .portal-gif',['steal'],89263);
+  weeklyPortal('.bb-insights .portal-gif',['social'],31567);
+  weeklyPortal('.bb-events .portal-gif',['yellow','cyan'],76219);
   var previous={};
   function shuffled(pool){
     var all=(bank.unitGifs[pool]||[]).slice();
