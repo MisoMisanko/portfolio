@@ -156,5 +156,7 @@ html,body{min-height:100%;background:#10002b;}
 
 .home-secondary{gap:12px;margin-top:24px;}.secondary-label{flex-basis:100%;text-align:center;font:11px/1.5 "Bungee",sans-serif;letter-spacing:1.5px;color:#bdb5d0;margin-bottom:2px;}.home-secondary button{min-height:44px;padding:11px 16px;border:1px solid #70628d;background:#25173b;border-radius:10px;color:#f1eaff;font:600 16px/1.3 "Comic Neue",sans-serif;text-decoration:none;box-shadow:0 3px 0 #090412;}.home-secondary button:hover{background:#39244f;border-color:#bfa5e4;}.home-secondary #awards-entry{background:#292336;border-color:#867550;color:#f4e2ac;}
 
+/* Event overview choices form a single vertical list on every screen. */
+#view-news .home-pair{grid-template-columns:1fr;}
 /* Secondary navigation remains smaller than the two main choices. */
 .home-secondary{gap:14px;margin-top:28px;}.secondary-label{font-size:14px;color:#efffa4;letter-spacing:1px;margin-bottom:4px;text-shadow:0 2px 0 #392453;}.home-secondary button{min-height:52px;padding:13px 21px;border-width:2px;font-size:18px;background:linear-gradient(120deg,#392450,#242341);box-shadow:0 4px 0 #090412;}.home-secondary button:hover{transform:translateY(-2px);border-color:#c4a5f4;}.homehub .bb-design{grid-column:1/-1;background:linear-gradient(120deg,#ffbf90,#f6f596);}@media(max-width:640px){.secondary-label{font-size:12px;}.home-secondary{gap:10px;}.home-secondary button{font-size:17px;padding:12px 15px;}}
