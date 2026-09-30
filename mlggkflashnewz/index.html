@@ -301,15 +301,12 @@ body,html{margin:0;padding:0;}
     <div class="chcemwrap"><div class="chcem">ČO NOVÉ?</div></div>
     <div class="pickline">klikni a vyber si 👇</div>
     <div class="homehub">
-      <section class="special-portal" id="special-entry-wrap" aria-label="Special week" hidden>
-        <div class="special-ribbon"><span>✦ SPECIAL WEEK ✦</span><span class="special-edition">D&amp;AD 2026</span></div>
-<button class="bigbtn bb-awards" id="awards-entry" data-go="view-awards"><span class="bbtxt">D&amp;AD REPORT<small>D&amp;AD 2026 REPORT · všetky ocenené práce</small></span><img class="portal-gif" src="assets/mobile/steal_03.gif" alt="" width="90" height="82"></button>
-      </section>
-<div class="entry-pair"><button class="bigbtn bb-doma" data-go="view-doma"><span class="bbtxt">ČO NOVÉ DOMA<small>Klienti, konkurencia &amp; social</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-svet" data-go="view-world"><span class="bbtxt">ČO NOVÉ VO SVETE<small>Kampane, ktoré sa oplatí vidieť</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-news bb-ideas" data-go="view-news"><span class="bbtxt">Z ČOHO MÔŽU VZNIKNÚŤ DOBRÉ KAMPANE<small>Aktuálne dianie a blížiace sa dátumy</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button></div></div>
+<div class="entry-pair"><button class="bigbtn bb-doma" data-go="view-doma"><span class="bbtxt">ČO NOVÉ DOMA<small>Klienti, konkurencia &amp; social</small></span><img class="portal-gif" src="assets/mobile/cyan_01.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-svet" data-go="view-world"><span class="bbtxt">ČO NOVÉ VO SVETE<small>Kampane, ktoré sa oplatí vidieť</small></span><img class="portal-gif" src="assets/mobile/steal_11.gif" alt="" width="90" height="82"></button></div></div>
+    <nav class="home-secondary" aria-label="Ďalšie prehľady"><button data-go="view-news">Prehľad udalostí <span aria-hidden="true">↗</span></button><span id="special-entry-wrap" hidden><button id="awards-entry" data-go="view-awards">D&amp;AD report <span aria-hidden="true">↗</span></button></span></nav>
     <div class="homehint">MLGGK Flash Newz · tvoja pravidelná dávka inšpirácie</div>
   </div>
 
-<div class="view" id="view-news" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="homehub">      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">NEWZ</h2><div class="home-pair">
+<div class="view" id="view-news" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="homehub">      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">PREHĽAD UDALOSTÍ</h2><div class="home-pair">
 <button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">AKTUÁLNE DIANIE<small>Trending topics pre značky</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">BLÍŽIACE SA DÁTUMY<small>Sviatky a udalosti najbližšieho mesiaca</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
       </div></section>
 </div></div>
@@ -382,7 +379,7 @@ body,html{margin:0;padding:0;}
 </div></div>
 
 <style id="hires-thumbs">.media{flex:0 0 300px;}.thumbframe{width:300px;}@media(max-width:640px){.media{flex:none;align-self:center;}.thumbframe{width:100%;max-width:380px;}}</style>
-<link rel="stylesheet" href="newsletter.css?v=descriptions-20260929-simple">
+<link rel="stylesheet" href="newsletter.css?v=light-home-descriptions-20260929-simple">
 <!--FLASH_DATA_START-->
 <script type="application/json" id="FLASH_DATA">
 {
@@ -8769,9 +8766,7 @@ body,html{margin:0;padding:0;}
   renderSpecial();
   if(data.awards && data.awards.active){
     document.getElementById('special-entry-wrap').hidden=false;
-    document.querySelector('#awards-entry small').textContent=data.awards.festival+' REPORT · všetky ocenené práce';
-    document.querySelector('.special-edition').textContent=data.awards.festival;
-    document.querySelector('#awards-entry .bbtxt').firstChild.textContent=data.awards.festival.replace(/\s+20\d{2}/,'')+' REPORT';
+    document.getElementById('awards-entry').textContent=data.awards.festival.replace(/\s+20\d{2}/,'')+' report ↗';
     renderAwardReport();
   }
   function renderAwardReport(){

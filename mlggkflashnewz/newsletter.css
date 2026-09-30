@@ -150,3 +150,6 @@ html,body{min-height:100%;background:#10002b;}
 @media(max-width:640px){#view-home .entry-pair .bbtxt{font-size:21px;}#view-home .entry-pair .bigbtn{min-height:105px;}#view-home .bb-awards .bbtxt{font-size:19px;}}
 
 .campaign-summary{font:18px/1.5 "Comic Neue",sans-serif;color:#292033;margin:12px 0 18px;}#view-home .entry-pair .bb-ideas .bbtxt{font-size:21px;line-height:1.25;}#view-home .bb-ideas{background:linear-gradient(120deg,#dcbcff,#a9e8f4);}@media(max-width:640px){#view-home .entry-pair .bb-ideas .bbtxt{font-size:17px;} .campaign-summary{font-size:17px;}}
+
+/* Secondary destinations stay quiet beneath the two original choices. */
+.home-secondary{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 24px;margin:22px auto 0;padding:0 14px;}.home-secondary [hidden]{display:none!important;}.home-secondary button{appearance:none;background:none;border:0;border-radius:4px;color:#c3bed2;font:15px/1.4 "Comic Neue",sans-serif;padding:10px 4px;cursor:pointer;text-decoration:underline;text-decoration-color:#655d7d;text-underline-offset:5px;}.home-secondary button:hover{color:#fff;text-decoration-color:#fff;}.home-secondary button:focus-visible{outline:2px solid #fff;outline-offset:3px;}.home-secondary button span{font-size:12px;opacity:.7;}
