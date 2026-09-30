@@ -163,3 +163,5 @@ html,body{min-height:100%;background:#10002b;}
 
 /* Bright secondary actions, without increasing their footprint. */
 .home-secondary button{background:linear-gradient(120deg,#89fff0,#b9e5ff);border-color:#090412;color:#171027;box-shadow:3px 4px 0 #7460ae;font-weight:800;}.home-secondary button span{opacity:1;}.home-secondary button:hover{background:linear-gradient(120deg,#b7fff6,#d6efff);border-color:#090412;box-shadow:3px 6px 0 #a38acf;}.home-secondary #awards-entry{background:linear-gradient(120deg,#ffe27d,#ffbd69);border-color:#090412;color:#24172c;box-shadow:3px 4px 0 #94713e;}.home-secondary #awards-entry:hover{background:linear-gradient(120deg,#ffedaa,#ffd292);box-shadow:3px 6px 0 #bd914c;}
+
+#view-design .smedia{aspect-ratio:auto;}#view-design .smedia>.cardmedia{height:auto;max-height:720px;object-fit:contain;}
