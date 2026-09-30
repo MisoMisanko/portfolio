@@ -22,6 +22,7 @@
   weeklyPortal('.bb-insights .portal-gif',['social'],31567);
   weeklyPortal('.bb-events .portal-gif',['yellow','cyan'],76219);
   weeklyPortal('.bb-news .portal-gif',['social','yellow'],20971);
+  weeklyPortal('.bb-design .portal-gif',['steal','blue'],58013);
   var previous={};
   function shuffled(pool){
     var all=(bank.unitGifs[pool]||[]).slice();
