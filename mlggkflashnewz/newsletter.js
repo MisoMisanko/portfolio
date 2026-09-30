@@ -21,7 +21,6 @@
   weeklyPortal('.bb-awards .portal-gif',['steal'],89263);
   weeklyPortal('.bb-insights .portal-gif',['social'],31567);
   weeklyPortal('.bb-events .portal-gif',['yellow','cyan'],76219);
-  weeklyPortal('.bb-advertising .portal-gif',['steal'],83491);
   weeklyPortal('.bb-news .portal-gif',['social','yellow'],20971);
   var previous={};
   function shuffled(pool){

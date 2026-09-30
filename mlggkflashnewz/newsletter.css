@@ -148,3 +148,5 @@ html,body{min-height:100%;background:#10002b;}
 #view-home .entry-pair .bigbtn{min-height:120px;}#view-home .entry-pair .bbtxt{font-size:26px;}#view-home .bb-awards{min-height:115px;}#view-home .bb-awards::before,#view-home .bb-awards::after{height:100px;top:5px;}#view-home .bb-awards .bbtxt{font-size:23px;}
 #view-world .smeta{margin:12px 0 18px;}#view-insights .scard .sname{margin-bottom:20px;}#view-events .event-body h3{margin-bottom:18px;}#view-insights .sp-blurb:empty,#view-social .sp-blurb:empty{display:none;}
 @media(max-width:640px){#view-home .entry-pair .bbtxt{font-size:21px;}#view-home .entry-pair .bigbtn{min-height:105px;}#view-home .bb-awards .bbtxt{font-size:19px;}}
+
+.campaign-summary{font:18px/1.5 "Comic Neue",sans-serif;color:#292033;margin:12px 0 18px;}#view-home .entry-pair .bb-ideas .bbtxt{font-size:21px;line-height:1.25;}#view-home .bb-ideas{background:linear-gradient(120deg,#dcbcff,#a9e8f4);}@media(max-width:640px){#view-home .entry-pair .bb-ideas .bbtxt{font-size:17px;} .campaign-summary{font-size:17px;}}
