@@ -310,7 +310,7 @@ body,html{margin:0;padding:0;}
   </div>
 
 <div class="view" id="view-news" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="homehub">      <section class="home-group life-group" aria-labelledby="life-group-title"><h2 id="life-group-title">NEWZ</h2><div class="home-pair">
-<button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">ČO HÝBE SVETOM<small>Domáce a svetové aktuálne dianie</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">ČO SA CHYSTÁ?<small>Udalosti a námety na najbližší mesiac</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
+<button class="bigbtn bb-insights"  data-go="view-insights"><span class="bbtxt">AKTUÁLNE DIANIE<small>Trending topics pre značky</small></span><img class="portal-gif" src="assets/mobile/social_05.gif" alt="" width="90" height="82"></button><button class="bigbtn bb-events"  data-go="view-events"><span class="bbtxt">BLÍŽIACE SA DÁTUMY<small>Sviatky a udalosti najbližšieho mesiaca</small></span><img class="portal-gif" src="assets/mobile/yellow_00.gif" alt="" width="90" height="82"></button>
       </div></section>
 </div></div>
   <!-- ===== SVET (kampane) ===== -->
@@ -322,8 +322,8 @@ body,html{margin:0;padding:0;}
   </div>
 
 <div class="view" id="view-awards" hidden><button class="backbtn" data-back="view-home">← späť</button><div class="secdiv"><span>🏆 SPECIAL WEEK</span></div><div id="awardshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
-<div class="view" id="view-insights" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>✳ ČO HÝBE SVETOM</span></div><div id="insightshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
-<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>▦ ČO SA CHYSTÁ?</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
+<div class="view" id="view-insights" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>✳ AKTUÁLNE DIANIE</span></div><div id="insightshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
+<div class="view" id="view-events" hidden><button class="backbtn" data-back="view-news">← späť</button><div class="secdiv"><span>▦ BLÍŽIACE SA DÁTUMY</span></div><div id="eventshost"></div><div class="foot"><div class="madeby">made by MM</div></div></div>
   <!-- ===== DOMA (výber unitu) ===== -->
   <div class="view" id="view-doma" hidden>
     <button class="backbtn" data-back="view-home">← späť</button>
@@ -8368,16 +8368,16 @@ body,html{margin:0;padding:0;}
     ]
   },
   "insights": {
-    "title": "ČO HÝBE SVETOM",
-    "blurb": "",
+    "title": "AKTUÁLNE DIANIE",
+    "blurb": "Popkultúra, spotrebiteľské trendy a témy, ktoré rezonujú. Dátumy označujú aktuálne zdroje, nie vznik trendu.",
     "items": [
       {
-        "title": "Slovenka Adéla zaujala New York Times",
+        "title": "ADÉLA: slovenský pop preniká do svetovej popkultúry",
         "region": "SLOVENSKO",
         "date": "25. 9. 2026",
         "links": [
           {
-            "label": "Čítať zdroj ↗",
+            "label": "Profil v NYT cez Denník N · 25. 9.",
             "url": "https://dennikn.sk/minuta/5584974/",
             "style": ""
           }
@@ -8391,93 +8391,66 @@ body,html{margin:0;padding:0;}
         }
       },
       {
-        "title": "Vlkolínec a tlak turizmu: slovenská obec v reportáži New York Times",
-        "region": "SLOVENSKO",
+        "title": "Nostalgia za rokom 2016 vracia chokery a skinny jeans",
+        "region": "SVET",
         "date": "25. 9. 2026",
+        "thumb": "assets/trending-2016.jpg",
         "links": [
           {
-            "label": "Čítať zdroj ↗",
-            "url": "https://dennikn.sk/minuta/5584974/",
+            "label": "Trendový report · Trendalytics",
+            "url": "https://trendalytics.co/trend-insights/2016-fashion-trends-are-back-in-2026-data-nostalgia-trend",
             "style": ""
           }
         ],
-        "thumb": "assets/current-vlkolinec.jpg",
         "imageCredit": {
-          "author": "Pilar from Catalunya",
+          "label": "Obrázok zo zdroja",
+          "author": "Trendalytics",
+          "url": "https://trendalytics.co/trend-insights/2016-fashion-trends-are-back-in-2026-data-nostalgia-trend",
+          "license": ""
+        }
+      },
+      {
+        "title": "Barrel nohavice: výrazná silueta sa presúva do bežných šatníkov",
+        "region": "SVET",
+        "date": "26. 9. 2026",
+        "thumb": "assets/trending-barrel.jpg",
+        "links": [
+          {
+            "label": "Trendový report · Trendalytics",
+            "url": "https://trendalytics.co/trend-insights/barrel-leg-pants-the-fastest-growing-trend",
+            "style": ""
+          }
+        ],
+        "imageCredit": {
+          "label": "Obrázok zo zdroja",
+          "author": "Trendalytics",
+          "url": "https://trendalytics.co/trend-insights/barrel-leg-pants-the-fastest-growing-trend",
+          "license": ""
+        }
+      },
+      {
+        "title": "Hoodie sezóna: TikTok plnia mikiny, unboxingy a jesenné outfity",
+        "region": "SVET",
+        "date": "24. 9. 2026",
+        "thumb": "assets/trending-hoodie.jpg",
+        "links": [
+          {
+            "label": "TikTok dáta · Vogue Business",
+            "url": "https://www.vogue.com/article/the-vogue-business-tiktok-trend-tracker",
+            "style": ""
+          }
+        ],
+        "imageCredit": {
+          "label": "Tematická fotografia",
+          "author": "AlexanderJonesi",
           "license": "CC BY-SA 2.0",
-          "url": "https://commons.wikimedia.org/wiki/File:Vlkolinecslovakia001.jpg"
+          "url": "https://commons.wikimedia.org/wiki/File:Marvin_Jones_2019_(cropped).jpg"
         }
-      },
-      {
-        "title": "Fobia Kid vydal album Odpor!",
-        "region": "SLOVENSKO",
-        "date": "22. 9. 2026",
-        "links": [
-          {
-            "label": "Čítať zdroj ↗",
-            "url": "https://dennikn.sk/minuta/5575879/",
-            "style": ""
-          }
-        ],
-        "yt": "MY-n6T2JKcs",
-        "thumb": "assets/current-fobia.jpg"
-      },
-      {
-        "title": "Beck sa vracia s albumom Ride Lonesome",
-        "region": "SVET",
-        "date": "25. 9. 2026",
-        "links": [
-          {
-            "label": "Čítať zdroj ↗",
-            "url": "https://dennikn.sk/5578782/trvalo-mu-dlho-kym-nasiel-odvahu-byt-priamy-a-zaroven-citlivy-beck-vydal-dalsie-podmanive-piesne-o-bolesti/",
-            "style": ""
-          }
-        ],
-        "thumb": "assets/current-beck.jpg",
-        "imageCredit": {
-          "author": "Zdroj fotografie",
-          "url": "https://dennikn.sk/5578782/trvalo-mu-dlho-kym-nasiel-odvahu-byt-priamy-a-zaroven-citlivy-beck-vydal-dalsie-podmanive-piesne-o-bolesti/",
-          "license": "",
-          "label": "Fotografia zo zdroja"
-        }
-      },
-      {
-        "title": "Spotify prepája počúvanie s AI asistentom Muse",
-        "region": "SVET",
-        "date": "23. 9. 2026",
-        "links": [
-          {
-            "label": "Čítať zdroj ↗",
-            "url": "https://newsroom.spotify.com/2026-09-23/spotify-meta-muse-agent/",
-            "style": ""
-          }
-        ],
-        "thumb": "assets/current-spotify.jpg",
-        "imageCredit": {
-          "author": "Zdroj fotografie",
-          "url": "https://newsroom.spotify.com/2026-09-23/spotify-meta-muse-agent/",
-          "license": "",
-          "label": "Fotografia zo zdroja"
-        }
-      },
-      {
-        "title": "U2 vydali Silencio z pripravovaného albumu Carnaval da Luz",
-        "region": "SVET",
-        "date": "25. 9. 2026",
-        "links": [
-          {
-            "label": "Čítať zdroj ↗",
-            "url": "https://dennikn.sk/minuta/5583418/",
-            "style": ""
-          }
-        ],
-        "yt": "1mCN-RDh0-0",
-        "thumb": "assets/current-u2.jpg"
       }
     ]
   },
   "events": {
-    "title": "ČO SA CHYSTÁ?",
+    "title": "BLÍŽIACE SA DÁTUMY",
     "fromDate": "2026-09-28",
     "toDate": "2026-10-28",
     "blurb": "28. 9. – 28. 10. 2026",
@@ -8840,7 +8813,7 @@ body,html{margin:0;padding:0;}
     var section=data.events;if(!section)return;
     function dateLabel(v){var a=v.split('-');return Number(a[2])+'. '+Number(a[1])+'.';}
     var cards=(section.items||[]).map(function(c){return '<article class="event-card"><div class="event-photo">'+mediaHTML(c,'')+'</div>'+photoCredit(c)+'<div class="event-content"><div class="event-date">'+dateLabel(c.date)+(c.end?' – '+dateLabel(c.end):'')+'</div><div class="event-body"><div class="event-kind">'+esc(c.kind)+' / '+esc(c.place)+'</div><h3>'+esc(c.title)+'</h3>'+sourceLinks(c)+'</div></div></article>';}).join('');
-    document.getElementById('eventshost').innerHTML='<section class="specialzone eventszone" data-pool="yellow"><div class="sp-top"><div class="sp-title">ČO SA CHYSTÁ?</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div><div class="event-list">'+cards+'</div></section>';
+    document.getElementById('eventshost').innerHTML='<section class="specialzone eventszone" data-pool="yellow"><div class="sp-top"><div class="sp-title">BLÍŽIACE SA DÁTUMY</div><p class="sp-blurb">'+esc(section.blurb)+'</p></div><div class="event-list">'+cards+'</div></section>';
   }
   renderInsights();renderEvents();
 
