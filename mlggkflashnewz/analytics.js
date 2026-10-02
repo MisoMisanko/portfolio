@@ -30,7 +30,7 @@
   panel.setAttribute('aria-label','Nastavenie analytiky');
   panel.innerHTML='<strong>Pomôžeš nám zlepšiť Flash Newz?</strong><p>So súhlasom použijeme Google Analytics na meranie návštev, otvorených sekcií a kliknutí. Google môže ukladať analytické cookies. Bez súhlasu sa analytika nenačíta; obsah funguje rovnako. Voľbu môžeš kedykoľvek zmeniť.</p><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Ako Google používa údaje ↗</a><div><button type="button" data-consent="yes">Povoliť analytiku</button><button type="button" data-consent="no">Bez analytiky</button></div>';
   document.body.appendChild(panel);
-  var settings=document.createElement('button');settings.type='button';settings.className='analytics-settings';settings.textContent='Nastavenie analytiky';settings.onclick=function(){panel.hidden=!panel.hidden;if(!panel.hidden)panel.querySelector('button').focus();};document.body.appendChild(settings);
+  var settings=document.createElement('button');settings.type='button';settings.className='analytics-settings';settings.textContent='Nastavenie analytiky';settings.onclick=function(){panel.hidden=!panel.hidden;if(!panel.hidden)panel.querySelector('button').focus();};var footer=document.createElement('footer');footer.className='analytics-footer';footer.appendChild(settings);document.body.appendChild(footer);
   panel.addEventListener('click',function(e){var b=e.target.closest('[data-consent]');if(!b)return;var accept=b.dataset.consent==='yes';save(accept);panel.hidden=true;
     if(accept){if(!enabled)enable();}else{
       enabled=false;window['ga-disable-'+ID]=true;

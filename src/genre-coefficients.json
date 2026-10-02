@@ -1,0 +1,154 @@
+[
+  {
+    "Genre": "Alternative",
+    "Agreeableness": "-0.006435870743147866",
+    "Conscientiousness": "-0.05126057415808505",
+    "Extraversion": "-0.03951160995730795",
+    "Neuroticism": "0.012287641382943673",
+    "Openness": "0.1314798895701061"
+  },
+  {
+    "Genre": "Classical music",
+    "Agreeableness": "-0.011692402994309818",
+    "Conscientiousness": "0.04170914294920991",
+    "Extraversion": "-0.04545294010211398",
+    "Neuroticism": "-0.0068265532292266255",
+    "Openness": "0.0981935597066912"
+  },
+  {
+    "Genre": "Country",
+    "Agreeableness": "0.006814090330372309",
+    "Conscientiousness": "-0.024145139211310535",
+    "Extraversion": "-0.06349526954596582",
+    "Neuroticism": "-0.10783833314139459",
+    "Openness": "-0.07620561311440792"
+  },
+  {
+    "Genre": "Dance",
+    "Agreeableness": "0.02197672111341078",
+    "Conscientiousness": "0.0018518689061845456",
+    "Extraversion": "0.07852956488577743",
+    "Neuroticism": "-0.02793117395171256",
+    "Openness": "-0.0016128809460427703"
+  },
+  {
+    "Genre": "Folk",
+    "Agreeableness": "0.05696774622004151",
+    "Conscientiousness": "0.026657885585492345",
+    "Extraversion": "0.02539363724424094",
+    "Neuroticism": "0.018878461099532652",
+    "Openness": "0.000612548519436608"
+  },
+  {
+    "Genre": "Hiphop, Rap",
+    "Agreeableness": "-0.008500321353202885",
+    "Conscientiousness": "0.013298781808764426",
+    "Extraversion": "0.06409711024186576",
+    "Neuroticism": "-0.09497986370755133",
+    "Openness": "-0.041492548807984635"
+  },
+  {
+    "Genre": "Latino",
+    "Agreeableness": "0.048371488402184",
+    "Conscientiousness": "0.07464653492416498",
+    "Extraversion": "0.035823867046551654",
+    "Neuroticism": "0.08353041945482449",
+    "Openness": "0.032865122746575486"
+  },
+  {
+    "Genre": "Metal or Hardrock",
+    "Agreeableness": "-0.06608447344892598",
+    "Conscientiousness": "-0.09649836490705901",
+    "Extraversion": "0.02947147820987746",
+    "Neuroticism": "-0.05859231391393694",
+    "Openness": "-0.02680509210213983"
+  },
+  {
+    "Genre": "Music",
+    "Agreeableness": "0.06336506615301622",
+    "Conscientiousness": "0.014118735142924256",
+    "Extraversion": "0.08437537519706044",
+    "Neuroticism": "0.03407250152556289",
+    "Openness": "0.04224844057568414"
+  },
+  {
+    "Genre": "Musical",
+    "Agreeableness": "0.10069112926970211",
+    "Conscientiousness": "0.00753422171994226",
+    "Extraversion": "0.008562438440920134",
+    "Neuroticism": "0.07573308226129216",
+    "Openness": "0.20025999739162084"
+  },
+  {
+    "Genre": "Opera",
+    "Agreeableness": "-0.006818713871764965",
+    "Conscientiousness": "0.07831515938528595",
+    "Extraversion": "0.047744508457972755",
+    "Neuroticism": "-0.027137628973133408",
+    "Openness": "0.1846054825454114"
+  },
+  {
+    "Genre": "Pop",
+    "Agreeableness": "0.022844230547277567",
+    "Conscientiousness": "0.002043058068997715",
+    "Extraversion": "-0.014847627642219354",
+    "Neuroticism": "0.026741082687768383",
+    "Openness": "-0.04097998452565536"
+  },
+  {
+    "Genre": "Punk",
+    "Agreeableness": "0.016671062396844856",
+    "Conscientiousness": "0.057507536371171945",
+    "Extraversion": "9.157117532424774e-05",
+    "Neuroticism": "-0.009510378124181025",
+    "Openness": "0.0412934513808829"
+  },
+  {
+    "Genre": "Reggae, Ska",
+    "Agreeableness": "0.019784176303163842",
+    "Conscientiousness": "-0.009925224184086926",
+    "Extraversion": "0.03487669769476365",
+    "Neuroticism": "-0.023052596941224926",
+    "Openness": "0.02334151105113004"
+  },
+  {
+    "Genre": "Rock",
+    "Agreeableness": "0.037962561435112875",
+    "Conscientiousness": "-0.007353934426835376",
+    "Extraversion": "-0.02348207439053241",
+    "Neuroticism": "0.04210814538934995",
+    "Openness": "0.05875317399227268"
+  },
+  {
+    "Genre": "Rock n roll",
+    "Agreeableness": "-0.0026301494397879565",
+    "Conscientiousness": "-0.014332497844567102",
+    "Extraversion": "0.039029901414508905",
+    "Neuroticism": "-0.0027021499549638984",
+    "Openness": "-0.03249091204969616"
+  },
+  {
+    "Genre": "Slow songs or fast songs",
+    "Agreeableness": "-0.014730202307333535",
+    "Conscientiousness": "0.002057377962189972",
+    "Extraversion": "0.032470611394218106",
+    "Neuroticism": "-0.02573688616304753",
+    "Openness": "-0.04061740169198524"
+  },
+  {
+    "Genre": "Swing, Jazz",
+    "Agreeableness": "0.008747647826343592",
+    "Conscientiousness": "0.036203283557370625",
+    "Extraversion": "0.006989543298037106",
+    "Neuroticism": "-0.028455528849436185",
+    "Openness": "0.11699951504936679"
+  },
+  {
+    "Genre": "Techno, Trance",
+    "Agreeableness": "-0.0017825118080983294",
+    "Conscientiousness": "-0.028479495688239483",
+    "Extraversion": "0.027330373971245568",
+    "Neuroticism": "0.023102411294209108",
+    "Openness": "-0.02586379448724005"
+  }
+]
